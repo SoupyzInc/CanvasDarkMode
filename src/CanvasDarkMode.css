@@ -1,0 +1,99 @@
+/*DASHBOARD=====================================================*/
+/*=======SITE BACKGROUND COLOR=======*/
+body {
+    background: #23272A !important;
+    color: #FFFFFF !important;
+}
+
+/*=======DASHBOARD TEXT BACKGROUND=======*/
+.ic-Dashboard-header__layout {
+    border-bottom: 1px solid #FFFFFF !important;
+    background: #23272A !important;
+}
+
+/*=======CLASS CARD BACKGROUNDS=======*/
+/*Card Text Background*/
+.ic-DashboardCard__header_content {
+    background: #2C2F33 !important;
+}
+
+/*Bottom Card Tray*/
+.ic-DashboardCard {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    background: #2C2F33 !important;
+}
+
+/*=======ACCOUNT MENU BACKGROUND=======*/
+Style Attribute {
+    --fLzZc-smallWidth: 28em;
+    background: #2C2F33 !important;
+}
+
+element.style {
+    --fLzZc-smallWidth: 28em;
+    background: #2C2F33 !important;
+}
+
+/*COURSES=======================================================*/
+/*Most Text*/
+a {
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+}
+
+/*Course Name Background*/
+#breadcrumbs>ul>li {
+    background: #23272A !important;
+}
+
+/*Header Bar Background*/
+.header-bar {
+    border-bottom: 1px solid #99AAB5 !important;
+    background-color: #23272A !important;
+}
+
+/*Home Page | Course Name Color*/
+.pages.show .course-title {
+    color: #FFFFFF !important;
+}
+
+/*Home Page | To Do List Icon & Subtext Colors*/
+.dxCCp_bGBk {
+    color: #fff !important;
+}
+
+/*Modules Page | Expand/Collaps Button*/
+.btn, .Button, .ui-button {
+    background: #FFFFFF00 !important;
+    color: #FFFFFF !important;
+    border-color: #99AAB5 !important;
+}
+
+/*Modules Page | Modules Background*/
+#context_modules {
+    min-width: 20px;
+    background: #23272A !important;
+}
+
+/*Modules Page | Module Name Bar*/
+.item-group-condensed .ig-header {
+    background: #2C2F33 !important;
+    border: 1px solid #99AAB5 !important;
+    color: #FFFFFF !important; /*Drop Down Arrow & Subtext*/
+}
+
+/*Modules Page | Item In Module*/
+.item-group-condensed .ig-row {
+    background: #23272A !important;
+    border-bottom: 1px solid #99AAB5 !important;
+}
+
+/*Modules Page | Item Icon*/
+.ig-list .ig-row {
+    color: #FFFFFF !important;
+}
+
+/*Modules Page | Footer Bar Background*/
+.item-group-container {
+    background: #23272A !important;
+}

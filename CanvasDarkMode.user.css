@@ -8,14 +8,14 @@
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/*v1.0.1 | Last Updated: 29 October 2020 | 11:40 PM EST*/
+/*v1.0.2 | Last Updated: 30 October 2020 |  9:00AM EST*/
 @-moz-document domain("instructure.com") {
     :root {
-        --dark-grey: #1d1e21 !important;
-        --grey: #23272A !important;
-        --light-grey: #2C2F33 !important;
-        --white-grey: #99AAB5 !important;
-        --text: #d7d7d7!important;
+        --dark-grey: #1d1e21 !important; /*Darker Background Color*/
+        --grey: #23272A !important; /*Normal Bakground Color*/
+        --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
+        --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
+        --text: #d7d7d7!important; /*Text Color & Highlights*/
     }
 
     /*DASHBOARD=====================================================*/

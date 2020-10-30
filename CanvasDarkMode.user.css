@@ -1,14 +1,14 @@
 /* ==UserStyle==
 @name        Alpha Build
 @namespace   soupyzinc
-@version     1.0.6
+@version     1.0.X
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/**v1.0.6 | Last Updated: 30 October 2020 | 1:18 PM EST
+/**v1.0.X | Last Updated: 30 October 2020 | 1:18 PM EST
  * Fixed discussion information being hard to read.
  */
 @-moz-document domain("instructure.com") {

@@ -1,15 +1,15 @@
 /* ==UserStyle==
 @name        myLearning Dark Mode
 @namespace   soupyzinc
-@version     1.0.4
+@version     1.0.5
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/**v1.0.4 | Last Updated: 30 October 2020 | 12:40 PM EST
- * Fixed List View
+/**v1.0.5 | Last Updated: 30 October 2020 | 1:00 PM EST
+ * Fixed discussion information being hard to read.
  */
 @-moz-document domain("instructure.com") {
     :root {
@@ -28,7 +28,6 @@
         background: var(--grey) !important;
         color: var(--text) !important;
     }
-    
     
     /*Check Mark Background*/
     .eHiXd_bPzo.eHiXd_ycrn, a.eHiXd_bPzo.eHiXd_ycrn, button.eHiXd_bPzo.eHiXd_ycrn, button.eHiXd_bPzo[type="button"].eHiXd_ycrn, button.eHiXd_bPzo[type="reset"].eHiXd_ycrn, button.eHiXd_bPzo[type="submit"].eHiXd_ycrn {
@@ -391,6 +390,18 @@
         color: var(--text) !important;
     }
 
+    /*Discussion Information (Due Date)*/
+    .alert-info {
+        background-color: var(--grey) !important;
+        color: var(--text) !important;
+        border: 1px solid var(--text) !important;
+    }
+    
+    /*Discussin Points*/
+    .discussion-points {
+        color: var(--text) !important;
+    }
+    
     /*Closed for Comments*/
     .closed-for-comments-discussions-v2__wrapper {
         border: 1px solid var(--text) !important;

@@ -1,7 +1,3 @@
-<p align="center">
-<img src="https://github.com/SoupyzInc/CanvasDarkMode/blob/main/images/CanvasDarkModeQRCode.png" alt="alt text" height="200">
-</p>
-
 # Canvas/myLearning Dark Mode
 A Stylus extension to give Canvas/myLearning a dark mode so your retinas don't have to burn out. Scroll down to see install instructions. This is still very WIP.
 
@@ -34,3 +30,8 @@ Stuff I plan to fix in order of priority.
 - Inbox is not in dark mode.
 - Account Settings is not in dark mode.
 - All other known issues.
+
+
+<p align="right">
+<img src="https://github.com/SoupyzInc/CanvasDarkMode/blob/main/images/CanvasDarkModeQRCode.png" alt="alt text" height="200">
+</p>

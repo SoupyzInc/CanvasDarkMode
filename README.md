@@ -13,3 +13,4 @@ This extension may cause graphical issues on certain parts of Canvas/myLearning.
 - List view on dashboard is not in dark mode.
 - Calendar is not in dark mode.
 - Inbox is not in dark mode.
+- Account Settings is not in dark mode.

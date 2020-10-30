@@ -1,13 +1,14 @@
 /* ==UserStyle==
 @name        Canvas Dark Mode
 @namespace   soupyzinc
-@version     1.0.0
+@version     1.0.1
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
+/*Last Updated: 29 October 2020 | 11:40 PM EST*/
 @-moz-document domain("instructure.com") {
     :root {
         --dark-grey: #1d1e21 !important;
@@ -21,6 +22,12 @@
     /*=======SITE BACKGROUND COLOR=======*/
     body {
         background: var(--grey) !important;
+        color: var(--text) !important;
+    }
+    
+    .eHiXd_bPzo.eHiXd_ycrn, a.eHiXd_bPzo.eHiXd_ycrn, button.eHiXd_bPzo.eHiXd_ycrn, button.eHiXd_bPzo[type="button"].eHiXd_ycrn, button.eHiXd_bPzo[type="reset"].eHiXd_ycrn, button.eHiXd_bPzo[type="submit"].eHiXd_ycrn {
+        height: var(--eHiXd-mediumHeight);
+        width: var(--eHiXd-mediumHeight);
         color: var(--text) !important;
     }
 

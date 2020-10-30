@@ -1,14 +1,14 @@
 /* ==UserStyle==
 @name        myLearning Dark Mode
 @namespace   soupyzinc
-@version     1.0.5
+@version     1.0.6
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/**v1.0.5 | Last Updated: 30 October 2020 | 1:00 PM EST
+/**v1.0.6 | Last Updated: 30 October 2020 | 7:30 PM EST
  * Fixed discussion information being hard to read.
  */
 @-moz-document domain("instructure.com") {
@@ -66,12 +66,18 @@
         color: var(--text) !important;
     }
     
-    
     /*List View | Today Button*/
     .eHiXd_eYmo, a.eHiXd_eYmo, button.eHiXd_eYmo, button.eHiXd_eYmo[type="button"], button.eHiXd_eYmo[type="reset"], button.eHiXd_eYmo[type="submit"] {
         background: var(--light-grey) !important;
         border-color: var(--text) !important;
         color: var(--text) !important;
+    }
+    
+    /*List View | Nothing Planned Yet Background*/
+    .EmptyDays-styles__root {
+        color: var(--text) !important;
+        background: var(--grey) !important;
+        margin-top: var(--text) !important;
     }
     
     /*=======DASHBOARD TEXT BACKGROUND=======*/

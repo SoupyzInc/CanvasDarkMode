@@ -319,7 +319,7 @@
 
     /*Bold Text w/ Shadow | Announcemnts Tab Word Count, Module Group Title Text*/
     .mce-label {
-        text-shadow: 0 0px 0px rgb(255 255 255 / 75%) !important;
+        /*text-shadow: 0 0px 0px rgb(255 255 255 / 75%) !important;*/
         color: var(--text) !important;
     }
 

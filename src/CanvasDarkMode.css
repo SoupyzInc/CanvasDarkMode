@@ -110,7 +110,6 @@ a {
 
 /*Modules Page | Modules Background*/
 #context_modules {
-    min-width: 20px;
     background: var(--grey) !important;
 }
 
@@ -141,10 +140,7 @@ a {
 /*Modules Page | Modules Group Title Text*/
 .ig-header .name {
     color: var(--text) !important;
-    font-size: 16px;
-    font-size: 1rem;
     text-shadow: 0px 0px 0 rgba(255, 255, 255, 0.5) !important;
-    font-weight: bold;
 }
 
 /*Assignments Page | Assignments Group Titles*/
@@ -266,6 +262,48 @@ button.eHiXd_brAJ[type="submit"] {
 .cjUyb_bGBk.cjUyb_fpfC,
 input.cjUyb_bGBk[type].cjUyb_fpfC {
     color: var(--text) !important;
+}
+
+/*Announcements Tab | Reply Box*/
+.discussion-reply-box {
+    background-color: var(--light-grey) !important;
+    border: 1px solid var(--text) !important;
+    color: var(--text) !important;
+}
+
+/*While Replying | Media Insert Tabs Body (Right Side)*/
+.cDwzl_caGd {
+    background: var(--light-grey) !important;
+    border-color: var(--text) !important;
+    color: var(--text) !important;
+    width: 100%;
+}
+
+/*While Replying | Media Insert Tabs (Right Side)*/
+.dXATK_cAug:not([aria-selected]):not([aria-disabled]):hover, .dXATK_cAug[aria-selected] {
+    background: var(--light-grey) !important;
+    border-color: var(--text) !important;
+}
+
+/*While Replying | Media Insert Tabs (Right Side) | Insert Folders*/
+._1iyfu1y {
+    color: var(--text) !important;
+}
+
+/*While Replying | Media Insert Tabs (Right Side) | Insert Files*/
+._xl47ao2 {
+    color: var(--text) !important;
+}
+
+/*While Replying | Media Insert Tabs (Right Side) | Insert Links*/
+[dir="ltr"] .eHiXd_eESV, [dir="ltr"] a.eHiXd_eESV, [dir="ltr"] button.eHiXd_eESV, [dir="ltr"] button.eHiXd_eESV[type="button"], [dir="ltr"] button.eHiXd_eESV[type="reset"], [dir="ltr"] button.eHiXd_eESV[type="submit"] {
+    background: var(--light-grey) !important;
+    color: var(--text) !important;
+}
+
+/*While Replying | Media Insert Tabs (Right Side) | Insert Links | Drop Down Box Options*/
+[dir="ltr"] .MlJlv_ycrn .MlJlv_dUEG {
+    background: var(--light-grey) !important;
 }
 
 /*Bold Text w/ Shadow | Announcemnts Tab Word Count, Module Group Title Text*/

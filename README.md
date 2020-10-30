@@ -1,3 +1,7 @@
+<p align="center">
+<img src="https://github.com/SoupyzInc/CanvasDarkMode/blob/main/images/CanvasDarkModeQRCode.png" alt="alt text" height="200">
+</p>
+
 # Canvas/myLearning Dark Mode
 A Stylus extension to give Canvas/myLearning a dark mode so your retinas don't have to burn out. Scroll down to see install instructions. This is still very WIP.
 

@@ -26,6 +26,7 @@ A Stylus extension to give Canvas/myLearning a dark mode so your retinas don't h
 Stuff I plan to fix in order of priority.
 
 - List view on dashboard is not in dark mode.
+- [Discussion due date is hard to see](https://github.com/SoupyzInc/CanvasDarkMode/issues/1).
 - Calendar is not in dark mode.
 - Inbox is not in dark mode.
 - Account Settings is not in dark mode.

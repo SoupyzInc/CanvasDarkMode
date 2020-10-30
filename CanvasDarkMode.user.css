@@ -1,15 +1,15 @@
 /* ==UserStyle==
-@name        Canvas Dark Mode Testing
+@name        myLearning Dark Mode
 @namespace   soupyzinc
-@version     1.0.3
+@version     1.0.4
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/**v1.0.3 | Last Updated: 30 October 2020 | 11:38 PM EST
- * Added List View Dark Mode & Comments
+/**v1.0.4 | Last Updated: 30 October 2020 | 12:40 PM EST
+ * Fixed List View
  */
 @-moz-document domain("instructure.com") {
     :root {
@@ -18,6 +18,8 @@
         --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
         --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
         --text: #d7d7d7!important; /*Text Color & Highlights*/
+       
+        --yyQPt-background: #2C2F33 !important; /*Discussion List View Check Box Background*/
     }
 
     /*DASHBOARD=====================================================*/
@@ -27,37 +29,40 @@
         color: var(--text) !important;
     }
     
+    
+    /*Check Mark Background*/
     .eHiXd_bPzo.eHiXd_ycrn, a.eHiXd_bPzo.eHiXd_ycrn, button.eHiXd_bPzo.eHiXd_ycrn, button.eHiXd_bPzo[type="button"].eHiXd_ycrn, button.eHiXd_bPzo[type="reset"].eHiXd_ycrn, button.eHiXd_bPzo[type="submit"].eHiXd_ycrn {
         height: var(--eHiXd-mediumHeight);
         width: var(--eHiXd-mediumHeight);
         color: var(--text) !important;
     }
     
+    /*List View | Class Name Background*/
+    .Grouping-styles__title {
+        padding: var(--eOFoE-titlePadding);
+        background-color: var(--grey) !important;
+        color: var(--text) !important;
+    }
+    
+    /*Dashboard Side Panel Selected Item Color*/
+    .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-icon-svg {
+        fill: var(--dark-grey) !important;
+    }
+    
     /*List View Background*/
     .Day-styles__root {
-        font-size: var(--fFVtz-fontSize);
-        font-family: var(--fFVtz-fontFamily);
-        font-weight: var(--fFVtz-fontWeight);
-        line-height: var(--fFVtz-lineHeight);
         color: var(--text) !important;
         background: var(--grey) !important;
-        margin-top: var(--fFVtz-marginTop);
     }
     
     /*List View Top Bar Icons (right)*/
     .PlannerHeader-styles__root {
-        font-size: var(--dIgyp-fontSize);
-        font-family: var(--dIgyp-fontFamily);
-        font-weight: var(--dIgyp-fontWeight);
         color: var(--text) !important;
         background: var(--grey) !important;
-        white-space: nowrap;
     }
     
     /*List View Ellipses*/
     element.style {
-        margin: 0px;
-        cursor: pointer;
         background: var(--grey) !important;
         color: var(--text) !important;
     }

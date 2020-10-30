@@ -10,6 +10,10 @@ A Stylus extension to give Canvas/myLearning a dark mode so your retinas don't h
 - [UserCSS.org website](https://userstyles.org/styles/191622/mylearning-dark-mode) (This website is very laggy, so be patient).
 3. This style has been optimized for High Contrast UI mode of Canvas. It is reccomended that you turn on High Contrast UI, under Account, under the left side bar.
 
+## Bugs/Suggestions
+- If you find a bug that isn't already known, please submit it to the issue tab of this repo and flag it with the bug tag.
+- If you would like to suggest a feature that isn't already suggested, please submit it to the issue tab of this repo and flag it with the enhancement flag.
+
 ## Known Bugs
 This extension may cause graphical issues on certain parts of Canvas/myLearning.
 

@@ -1,14 +1,16 @@
 /* ==UserStyle==
-@name        Canvas Dark Mode
+@name        Canvas Dark Mode Testing
 @namespace   soupyzinc
-@version     1.0.1
+@version     1.0.3
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/*v1.0.2 | Last Updated: 30 October 2020 |  9:00AM EST*/
+/**v1.0.3 | Last Updated: 30 October 2020 | 11:38 PM EST
+ * Added List View Dark Mode & Comments
+ */
 @-moz-document domain("instructure.com") {
     :root {
         --dark-grey: #1d1e21 !important; /*Darker Background Color*/
@@ -30,7 +32,44 @@
         width: var(--eHiXd-mediumHeight);
         color: var(--text) !important;
     }
-
+    
+    /*List View Background*/
+    .Day-styles__root {
+        font-size: var(--fFVtz-fontSize);
+        font-family: var(--fFVtz-fontFamily);
+        font-weight: var(--fFVtz-fontWeight);
+        line-height: var(--fFVtz-lineHeight);
+        color: var(--text) !important;
+        background: var(--grey) !important;
+        margin-top: var(--fFVtz-marginTop);
+    }
+    
+    /*List View Top Bar Icons (right)*/
+    .PlannerHeader-styles__root {
+        font-size: var(--dIgyp-fontSize);
+        font-family: var(--dIgyp-fontFamily);
+        font-weight: var(--dIgyp-fontWeight);
+        color: var(--text) !important;
+        background: var(--grey) !important;
+        white-space: nowrap;
+    }
+    
+    /*List View Ellipses*/
+    element.style {
+        margin: 0px;
+        cursor: pointer;
+        background: var(--grey) !important;
+        color: var(--text) !important;
+    }
+    
+    
+    /*List View | Today Button*/
+    .eHiXd_eYmo, a.eHiXd_eYmo, button.eHiXd_eYmo, button.eHiXd_eYmo[type="button"], button.eHiXd_eYmo[type="reset"], button.eHiXd_eYmo[type="submit"] {
+        background: var(--light-grey) !important;
+        border-color: var(--text) !important;
+        color: var(--text) !important;
+    }
+    
     /*=======DASHBOARD TEXT BACKGROUND=======*/
     .ic-Dashboard-header__layout {
         border-bottom: 1px solid var(--text) !important;

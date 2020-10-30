@@ -19,7 +19,7 @@ A Stylus extension to give Canvas/myLearning a dark mode so your retinas don't h
 </p>
 
 ## Bugs/Suggestions
-- If you find a bug that isn't already known, please submit it to the [issue tab](https://github.com/SoupyzInc/CanvasDarkMode/issues) and flag it with the bug tag.
+- If you find a bug that isn't already known, please submit it to the [issue tab](https://github.com/SoupyzInc/CanvasDarkMode/issues) and flag it with the bug tag. Please provide a photo and description clearly showing the bug.
 - If you would like to suggest a feature that isn't already suggested, please submit it to the [issue tab](https://github.com/SoupyzInc/CanvasDarkMode/issues) and flag it with the enhancement tag.
 
 ## Known Bugs

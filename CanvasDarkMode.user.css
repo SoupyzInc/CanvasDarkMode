@@ -1,15 +1,15 @@
 /* ==UserStyle==
 @name        myLearning Dark Mode
 @namespace   soupyzinc
-@version     1.0.6
+@version     1.0.7
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/**v1.0.6 | Last Updated: 30 October 2020 | 7:30 PM EST
- * Fixed discussion information being hard to read.
+/**v1.0.7 | Last Updated: 30 October 2020 | 8:30 PM EST
+ * Fixed card context menu colors
  */
 @-moz-document domain("instructure.com") {
     :root {
@@ -18,7 +18,7 @@
         --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
         --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
         --text: #d7d7d7!important; /*Text Color & Highlights*/
-       
+    
         --yyQPt-background: #2C2F33 !important; /*Discussion List View Check Box Background*/
     }
 
@@ -27,6 +27,59 @@
     body {
         background: var(--grey) !important;
         color: var(--text) !important;
+    }
+    
+    /*Card 3 Dots Menu | Footer*/
+    [dir="ltr"] .fOyUs_EMjX {
+        background: var(--grey) !important;
+    }
+    
+    /*Card 3 Dots Menu | Unselected Tab Header Background*/
+    .XBLto_bXVH {
+        background: var(--grey) !important;
+        color: var(--text) !important;
+    }
+    
+    /*Card 3 Dots Menu | Unselected Tab Header Text*/
+    [dir="ltr"] .bdYPe_eLeB {
+        margin-right: 0.2em;
+        color: var(--text) !important;
+    }
+    
+    /*Move Tab Header*/
+    .bdYPe_eLeB:not([aria-selected]):not([aria-disabled]):hover, .bdYPe_eLeB[aria-selected] {
+        background: var(--light-grey) !important;
+    }
+    
+    /*Move Tab Background (top and bottom sliver)*/
+    .cAqHo_eAjd {
+        background: var(--light-grey) !important;
+    }
+    
+    /*Move Tab | Move Button*/
+    .sJGfW_bGBk {
+        background: var(--light-grey) !important;
+    }
+    
+    /*Move Tab | Move Button Icon*/
+    .esvoZ_drOs {
+        color: var(---dark-grey) !important;
+    }
+    
+    /*Card 3 Dots Menu | Color Tab Header*/
+    [dir="ltr"] .bdYPe_eLeB:first-of-type {
+        background: var(--light-grey) !important;
+        color: var(--text) !important;
+    }
+     
+    /*Color Picker Sides*/
+    .DashboardCardMenu__ColorPicker {
+        background: var(--grey) !important;
+    }
+    
+    /*Color Picker Body*/
+    .ColorPicker__Container {
+        background: var(--grey) !important;
     }
     
     /*Check Mark Background*/

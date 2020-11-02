@@ -24,7 +24,7 @@
         --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
         --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
         --text: #d7d7d7!important; /*Text Color & Highlights*/
-       
+    
         --yyQPt-background: #2C2F33 !important; /*Discussion List View Check Box Background*/
     }
 
@@ -33,6 +33,112 @@
     body {
         background: var(--grey) !important;
         color: var(--text) !important;
+    }
+    
+    /*myLearning Logo*/
+    .ic-sidebar-logo__image {
+        max-height: 0px !important;
+    }
+    
+    /*Pasco County Logo (top left)*/
+    .ic-app-header__logomark {
+        height: 0px!important;
+    }
+    
+    /*myLearning Water Mark*/
+    .ic-Layout-watermark {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 0 !important;
+        height: 100%;
+        opacity: var(--ic-brand-watermark-opacity);
+        background-image: var(--ic-brand-watermark);
+        background-repeat: no-repeat;
+        background-position: left bottom;
+    }
+    
+    /*Error Message*/
+    .cvphu_bgqc {
+        background: var(--dark-grey) !important;
+        color: var(--text) !important;
+    }
+    
+    /*Announcement*/
+    .ic-notification__content {
+        background: var(--grey) !important;
+    }
+    
+    /*TTS Button*/
+    .rspopup {
+        background: var(--light-grey) !important;
+        box-shadow: 0 0 5px #000 !important;
+        color: var(--text) !important;
+    }
+    
+    .eoNrR_blJt {
+        background: var(--grey) !important;
+        color: var(--text) !important;
+    }
+    
+    /*Dashboard View Selection Options*/
+    .sJGfW_blJt {
+        background: var(--light-grey) !important;
+        color: var(--text) !important;
+    }
+    
+    /*Card 3 Dots Menu | Footer*/
+    [dir="ltr"] .fOyUs_EMjX {
+        background: var(--grey) !important;
+    }
+    
+    /*Card 3 Dots Menu | Unselected Tab Header Background*/
+    .XBLto_bXVH {
+        background: var(--grey) !important;
+        color: var(--text) !important;
+    }
+    
+    /*Card 3 Dots Menu | Unselected Tab Header Text*/
+    [dir="ltr"] .bdYPe_eLeB {
+        margin-right: 0.2em;
+        color: var(--text) !important;
+    }
+    
+    /*Move Tab Header*/
+    .bdYPe_eLeB:not([aria-selected]):not([aria-disabled]):hover, .bdYPe_eLeB[aria-selected] {
+        background: var(--light-grey) !important;
+    }
+    
+    /*Move Tab Background (top and bottom sliver)*/
+    .cAqHo_eAjd {
+        background: var(--light-grey) !important;
+    }
+    
+    /*Move Tab | Move Button*/
+    .sJGfW_bGBk {
+        background: var(--light-grey) !important;
+    }
+    
+    /*Move Tab | Move Button Icon*/
+    .esvoZ_drOs {
+        color: var(---dark-grey) !important;
+    }
+    
+    /*Card 3 Dots Menu | Color Tab Header*/
+    [dir="ltr"] .bdYPe_eLeB:first-of-type {
+        background: var(--light-grey) !important;
+        color: var(--text) !important;
+    }
+     
+    /*Color Picker Sides*/
+    .DashboardCardMenu__ColorPicker {
+        background: var(--grey) !important;
+    }
+    
+    /*Color Picker Body*/
+    .ColorPicker__Container {
+        background: var(--grey) !important;
     }
     
     /*Check Mark Background*/
@@ -44,7 +150,6 @@
     
     /*List View | Class Name Background*/
     .Grouping-styles__title {
-        padding: var(--eOFoE-titlePadding);
         background-color: var(--grey) !important;
         color: var(--text) !important;
     }
@@ -72,12 +177,18 @@
         color: var(--text) !important;
     }
     
-    
     /*List View | Today Button*/
     .eHiXd_eYmo, a.eHiXd_eYmo, button.eHiXd_eYmo, button.eHiXd_eYmo[type="button"], button.eHiXd_eYmo[type="reset"], button.eHiXd_eYmo[type="submit"] {
         background: var(--light-grey) !important;
         border-color: var(--text) !important;
         color: var(--text) !important;
+    }
+    
+    /*List View | Nothing Planned Yet Background*/
+    .EmptyDays-styles__root {
+        color: var(--text) !important;
+        background: var(--grey) !important;
+        margin-top: var(--text) !important;
     }
     
     /*=======DASHBOARD TEXT BACKGROUND=======*/
@@ -222,6 +333,8 @@
         color: var(--text) !important;
         font-weight: bold;
     }
+    
+    
 
     /*=======ASSIGNMENTS=======*/
     /*Assignnments Page | Submission Box*/
@@ -278,6 +391,22 @@
         color: var(--text) !important;
     }
 
+    /*Assignments Tab | Peer Review Menu File View*/
+    .file-upload-submission {
+        display: flex;
+        align-items: center;
+        background: var(--grey) !important;
+        padding: 12px 6px;
+        border-bottom: 1px solid var(--text) !important;
+    }
+    
+    /*Assignments Tab | Peer Review Menu Submission/Comment Box*/
+    .submission-details-comments .comments {
+        height: 300px;
+        overflow: auto;
+        background-color: var(--grey) !important;
+    }
+    
     /*=======GRADES=======*/
     /*Grades Tab | Hover Sub Text*/
     #grades_summary th.title .context {

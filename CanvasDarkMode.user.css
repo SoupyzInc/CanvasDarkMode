@@ -1,15 +1,17 @@
 /* ==UserStyle==
 @name        myLearning Dark Mode
 @namespace   soupyzinc
-@version     1.1.0
+@version     1.1.1
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/**v1.1.0 | Last Updated: 2 November 2020 | 11:22 AM EST
- * TTS Button is now in dark mode.
+/**v1.1.1 | Last Updated: 2 November 2020 | 11:22 AM EST
+ *
+ * -Removed logos/watermarks when High Contrast UI is off
+ * -Announcements are now in darkmode.
  */
 @-moz-document domain("instructure.com") {
     :root {
@@ -29,10 +31,39 @@
         color: var(--text) !important;
     }
     
+    /*myLearning Logo*/
+    .ic-sidebar-logo__image {
+        max-height: 0px !important;
+    }
+    
+    /*Pasco County Logo (top left)*/
+    .ic-app-header__logomark {
+        height: 0px!important;
+    }
+    
+    /*myLearning Water Mark*/
+    .ic-Layout-watermark {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 0 !important;
+        height: 100%;
+        opacity: var(--ic-brand-watermark-opacity);
+        background-image: var(--ic-brand-watermark);
+        background-repeat: no-repeat;
+        background-position: left bottom;
+    }
+    
     /*Error Message*/
     .cvphu_bgqc {
         background: var(--dark-grey) !important;
         color: var(--text) !important;
+    }
+    
+    /*Announcement*/
+    .ic-notification__content {
+        background: var(--grey) !important;
     }
     
     /*TTS Button*/
@@ -45,12 +76,6 @@
     .eoNrR_blJt {
         background: var(--grey) !important;
         color: var(--text) !important;
-        display: block;
-        font-family: var(--eoNrR-fontFamily);
-        font-size: var(--eoNrR-fontSize);
-        font-weight: var(--eoNrR-fontWeight);
-        padding: var(--eoNrR-padding);
-        text-align: start;
     }
     
     /*Dashboard View Selection Options*/
@@ -121,7 +146,6 @@
     
     /*List View | Class Name Background*/
     .Grouping-styles__title {
-        padding: var(--eOFoE-titlePadding);
         background-color: var(--grey) !important;
         color: var(--text) !important;
     }

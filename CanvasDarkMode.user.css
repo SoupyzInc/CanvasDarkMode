@@ -9,7 +9,7 @@
 @author      Matthew Okashita
 ==/UserStyle== */
 /**v1.1.0 | Last Updated: 2 November 2020 | 11:22 AM EST
- * Error messages (maybe test warnings too) are now in dark mode.
+ * TTS Button is now in dark mode.
  */
 @-moz-document domain("instructure.com") {
     :root {
@@ -32,6 +32,13 @@
     /*Error Message*/
     .cvphu_bgqc {
         background: var(--dark-grey) !important;
+        color: var(--text) !important;
+    }
+    
+    /*TTS Button*/
+    .rspopup {
+        background: var(--light-grey) !important;
+        box-shadow: 0 0 5px #000 !important;
         color: var(--text) !important;
     }
     

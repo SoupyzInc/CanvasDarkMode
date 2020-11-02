@@ -8,8 +8,8 @@
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/**v1.0.X | Last Updated: 30 October 2020 | 1:18 PM EST
- * Fixed discussion information being hard to read.
+/**v1.0.X | Last Updated: 2 November 2020 | 7:21 AM EST
+ * Fixing Calendar Function
  */
 @-moz-document domain("instructure.com") {
     :root {
@@ -443,7 +443,31 @@
     }
     
     /*======CALEDNDAR======*/
+    /*Main Calendar Background*/
     .fc-view-container *, .fc-view-container *:before, .fc-view-container *:after {
         background: var(--grey) !important;
+    }
+    
+    /*Day fo the Week Text*/
+    #calendar-app .fc-month-view .fc-widget-header, #calendar-drag-and-drop-container .fc-month-view .fc-widget-header {
+        color: var(--text) !important;
+    }
+    
+    /*Mini Calendar Background*/
+    #minical {
+        background-color: var(--grey) !important;
+        border: 1px solid var(--text) !important;
+    }
+    
+    /*Mini Calendar Days that are not today*/
+    .fc-view-container *, .fc-view-container *:before, .fc-view-container *:after {
+        box-sizing: content-box;
+        color: var(--text) !important;
+    }
+    
+    /*Mini Calendar Selected Date | Does Not Work*/
+    state-highlight {
+        color: var(--dark-grey) !important;
+        font-weight: bold;
     }
 }

@@ -1,17 +1,21 @@
 /* ==UserStyle==
 @name        myLearning Dark Mode
 @namespace   soupyzinc
-@version     1.1.1
+@version     1.1.2
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/**v1.1.1 | Last Updated: 2 November 2020 | 5:45 PM EST
- *
- * -Removed logos/watermarks when High Contrast UI is off
- * -Announcements are now in darkmode.
+/**v1.1.2 | Last Updated: 2 November 2020 | 6:01 PM EST
+ * -Calendar page now has darkmode!
+ * 
+ * Minor Bugs w/ Calendar:
+ * -Highlight for class selection makes text hard to see.
+ * -Current date highlight for the mini calendar
+ * is being overwritten with the non-selected days
+ * var(--text) color.
  */
 @-moz-document domain("instructure.com") {
     :root {
@@ -571,5 +575,96 @@
     .module-sequence-footer .module-sequence-footer-content {
         background: var(--grey) !important;
         border-top: 1px solid var(--text) !important;
+    }
+    
+    /*======CALEDNDAR======*/
+    /*Main Calendar Background*/
+    .fc-view-container *, .fc-view-container *:before, .fc-view-container *:after {
+        background: var(--grey) !important;
+    }
+    
+    /*Day fo the Week Text*/
+    #calendar-app .fc-month-view .fc-widget-header, #calendar-drag-and-drop-container .fc-month-view .fc-widget-header {
+        color: var(--text) !important;
+    }
+    
+    /*Mini Calendar Background*/
+    #minical {
+        background-color: var(--grey) !important;
+        border: 1px solid var(--text) !important;
+    }
+    
+    /*Mini Calendar Days that are not today*/
+    .fc-view-container *, .fc-view-container *:before, .fc-view-container *:after {
+        box-sizing: content-box;
+        color: var(--text) !important;
+    }
+    
+    /*Mini Calendar Selected Date | Does Not Work*/
+    state-highlight {
+        color: var(--dark-grey) !important;
+        font-weight: bold;
+    }
+    
+    /*Class Selection Background*/
+    #context-list-holder, #undated-events {
+        background-color: var(--grey) !important;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+    
+    /*Color Picker For Class Selection*/
+    .ColorPicker__Container.with-border {
+        box-shadow: 0 1px 8px rgba(0,0,0,0.2);
+        border-radius: 3px;
+        border: 1px solid #384249;
+        background: var(--light-grey) !important;
+    }
+    
+    /*Preview Selected Event*/
+    .event-details {
+        position: absolute;
+        z-index: 1000;
+        border: 1px solid var(--text) !important
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+        background-color: var(--light-grey) !important;
+        color: var(--text) !important;
+        min-width: 320px;
+        max-width: 500px;
+    }
+    
+    /*Preview Selected Even Time and Datet*/
+    .event-details-timestring {
+        color: var(--text) !important;
+    }
+    
+    /*Calendar Feed Widget Header*/
+    .ui-dialog .ui-dialog-titlebar.ui-widget-header, .ui-dialog .ui-datepicker .ui-widget-header.ui-datepicker-header, .ui-datepicker .ui-dialog .ui-widget-header.ui-datepicker-header {
+        background: var(--grey) !important;
+        padding: 16px 12px;
+        border-bottom: 1px solid var(--text) !important;
+    }
+    
+    /*Calendar Feed Widget Body*/
+    .ui-widget-content {
+        border: 1px solid var(--text) !important;
+        background: var(--grey) !important;
+        color: var(--ic-brand-font-color-dark);
+    }
+    
+    /*Month Calendar*/
+    .ui-datepicker-header.ui-widget-header {
+        background: var(--grey) !important;
+        border-color: var(--text) !important;
+    }
+    
+    /*Undated events*/
+    #undated-events .event {
+        background-color: var(--light-grey) !important;
+    }
+    
+    /*Calendar Agenda*/
+    .agenda-wrapper {
+        background-color: var(--grey) !important;
     }
 }

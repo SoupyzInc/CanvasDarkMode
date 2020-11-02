@@ -1,15 +1,15 @@
 /* ==UserStyle==
 @name        myLearning Dark Mode
 @namespace   soupyzinc
-@version     1.0.9
+@version     1.1.0
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/**v1.0.9 | Last Updated: 2 November 2020 | 10:38 AM EST
- * Dashboard view selection context menu visibility fixed.
+/**v1.1.0 | Last Updated: 2 November 2020 | 11:22 AM EST
+ * Error messages (maybe test warnings too) are now in dark mode.
  */
 @-moz-document domain("instructure.com") {
     :root {
@@ -26,6 +26,12 @@
     /*=======SITE BACKGROUND COLOR=======*/
     body {
         background: var(--grey) !important;
+        color: var(--text) !important;
+    }
+    
+    /*Error Message*/
+    .cvphu_bgqc {
+        background: var(--dark-grey) !important;
         color: var(--text) !important;
     }
     
@@ -292,6 +298,8 @@
         color: var(--text) !important;
         font-weight: bold;
     }
+    
+    
 
     /*=======ASSIGNMENTS=======*/
     /*Assignnments Page | Submission Box*/
@@ -363,6 +371,7 @@
         overflow: auto;
         background-color: var(--grey) !important;
     }
+    
     /*=======GRADES=======*/
     /*Grades Tab | Hover Sub Text*/
     #grades_summary th.title .context {

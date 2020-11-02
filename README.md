@@ -9,9 +9,8 @@ A Stylus extension to give Canvas/myLearning a dark mode so your retinas don't h
 
 ## Installation
 1. Install the Stylus browser extension for [Chrome/Brave](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne), [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/), or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/).
-2. Install the style either through 
-- [UserCSS](https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css) (reccomended; supports auto-updates) or through the 
-- [userstyles.org](https://userstyles.org/styles/191622/mylearning-dark-mode) (this website can be very laggy, so be patient).
+2. Install the style either through [UserCSS](https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css) (reccomended; supports auto-updates) or through the 
+<!--- [userstyles.org](https://userstyles.org/styles/191622/mylearning-dark-mode) (this website can be very laggy, so be patient).-->
 3. This style looks best when High Contrast UI is disabled.
 
 ## Bugs/Suggestions

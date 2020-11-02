@@ -1,15 +1,15 @@
 /* ==UserStyle==
 @name        myLearning Dark Mode
 @namespace   soupyzinc
-@version     1.0.7
+@version     1.0.8
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/**v1.0.7 | Last Updated: 30 October 2020 | 8:30 PM EST
- * Fixed card context menu colors
+/**v1.0.8 | Last Updated: 2 November 2020 | 10:28 AM EST
+ * Fixed assignments that involve file downloads and comment submission
  */
 @-moz-document domain("instructure.com") {
     :root {
@@ -331,6 +331,21 @@
         color: var(--text) !important;
     }
 
+    /*Assignments Tab | Peer Review Menu File View*/
+    .file-upload-submission {
+        display: flex;
+        align-items: center;
+        background: var(--grey) !important;
+        padding: 12px 6px;
+        border-bottom: 1px solid var(--text) !important;
+    }
+    
+    /*Assignments Tab | Peer Review Menu Submission/Comment Box*/
+    .submission-details-comments .comments {
+        height: 300px;
+        overflow: auto;
+        background-color: var(--grey) !important;
+    }
     /*=======GRADES=======*/
     /*Grades Tab | Hover Sub Text*/
     #grades_summary th.title .context {

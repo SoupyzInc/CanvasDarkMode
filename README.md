@@ -25,6 +25,7 @@ A Stylus extension to give Canvas/myLearning a dark mode so your retinas don't h
 ## Fix List
 Stuff I plan to fix next in order of priority (not absolute).
 
+- Quizzes are not in dark mode.
 - [Calendar is not in dark mode](https://github.com/SoupyzInc/CanvasDarkMode/issues/5).
 - [All other known issues](https://github.com/SoupyzInc/CanvasDarkMode/issues).
 

@@ -1,26 +1,17 @@
 /* ==UserStyle==
-@name        Calendar Branch
+@name        myLearning Dark Mode
 @namespace   soupyzinc
-@version     1.0.7
+@version     1.1.2
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/**v1.0.7 | Calendar Branch Ver. | Last Updated: 2 November 2020 | 9:13 AM EST
- * View event context menu is in dark mode.
+/**v1.1.2 | Last Updated: 2 November 2020 | 6:01 PM EST
+ * -Calendar page now has darkmode!
  * 
- * Need to fix:
- * -Agenda view (top right) is not in dark mode.
- * -Minor graphical bugs in week view (top right).
- * -New event context menu.
- * -Month selection context menu.
- * -Calendar feed.
- * -Possibly undated drop down menu.
- * -Possible scroll bar color (may be a winodws setting).
- * 
- * Bugs:
+ * Minor Bugs w/ Calendar:
  * -Highlight for class selection makes text hard to see.
  * -Current date highlight for the mini calendar
  * is being overwritten with the non-selected days
@@ -516,5 +507,35 @@
     /*Preview Selected Even Time and Datet*/
     .event-details-timestring {
         color: var(--text) !important;
+    }
+    
+    /*Calendar Feed Widget Header*/
+    .ui-dialog .ui-dialog-titlebar.ui-widget-header, .ui-dialog .ui-datepicker .ui-widget-header.ui-datepicker-header, .ui-datepicker .ui-dialog .ui-widget-header.ui-datepicker-header {
+        background: var(--grey) !important;
+        padding: 16px 12px;
+        border-bottom: 1px solid var(--text) !important;
+    }
+    
+    /*Calendar Feed Widget Body*/
+    .ui-widget-content {
+        border: 1px solid var(--text) !important;
+        background: var(--grey) !important;
+        color: var(--ic-brand-font-color-dark);
+    }
+    
+    /*Month Calendar*/
+    .ui-datepicker-header.ui-widget-header {
+        background: var(--grey) !important;
+        border-color: var(--text) !important;
+    }
+    
+    /*Undated events*/
+    #undated-events .event {
+        background-color: var(--light-grey) !important;
+    }
+    
+    /*Calendar Agenda*/
+    .agenda-wrapper {
+        background-color: var(--grey) !important;
     }
 }

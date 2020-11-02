@@ -1,15 +1,31 @@
 /* ==UserStyle==
 @name        myLearning Dark Mode
 @namespace   soupyzinc
-@version     1.0.X
+@version     1.0.x
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/**v1.0.X | Last Updated: 2 November 2020 | 7:21 AM EST
- * Fixing Calendar Function
+/**v1.0.X | Calendar Branch Ver. | Last Updated: 2 November 2020 | 9:13 AM EST
+ * Fixing Class Selection
+ * 
+ * Need to fix:
+ * -Agenda view (top right) is not in dark mode.
+ * -Minor graphical bugs in week view (top right).
+ * -New event context menu.
+ * -Viewing existing event context menu.
+ * -Month selection context menu.
+ * -Calendar feed.
+ * -Possibly undated drop down menu.
+ * -Possible scroll bar color (may be a winodws setting).
+ * 
+ * Bugs:
+ * -Highlight for class selection makes text hard to see.
+ * -Current date highlight for the mini calendar
+ * is being overwritten with the non-selected days
+ * var(--text) color.
  */
 @-moz-document domain("instructure.com") {
     :root {
@@ -469,5 +485,20 @@
     state-highlight {
         color: var(--dark-grey) !important;
         font-weight: bold;
+    }
+    
+    /*Class Selection Background*/
+    #context-list-holder, #undated-events {
+        background-color: var(--grey) !important;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+    
+    /*Color Picker For Class Selection*/
+    .ColorPicker__Container.with-border {
+        box-shadow: 0 1px 8px rgba(0,0,0,0.2);
+        border-radius: 3px;
+        border: 1px solid #384249;
+        background: var(--light-grey) !important;
     }
 }

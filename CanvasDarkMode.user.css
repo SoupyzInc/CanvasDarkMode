@@ -1,15 +1,16 @@
 /* ==UserStyle==
 @name        myLearning Dark Mode
 @namespace   soupyzinc
-@version     1.1.4
+@version     1.1.5
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/**v1.1.4 | Last Updated: 2 November 2020 | 8:27 PM EST
- * Quiz and quiz reveiw are now in dark mode.
+/**v1.1.5 | Last Updated: 2 November 2020 | 8:27 PM EST
+ * Removed gradient on recent feedback.
+ * Remobed gradient on list view class titles.
  */
 @-moz-document domain("instructure.com") {
     :root {
@@ -81,6 +82,19 @@
         background: var(--light-grey) !important;
         color: var(--text) !important;
     }
+    
+    /*Recent Feedback Gradient*/
+    #right-side .events_list .event-details:after, #right-side .events_list .todo-details:after, #right-side .to-do-list .event-details:after, #right-side .to-do-list .todo-details:after {
+        background: linear-gradient(to right, rgba(255,255,255,0) 0%, var(--grey) 0%) !important;
+    }
+    
+    
+    #right-side .right-side-list li em, #right-side .right-side-list li p {
+        color: var(--text) !important;
+        background: var(--grey);
+    }
+    
+    
     
     /*Card 3 Dots Menu | Footer*/
     [dir="ltr"] .fOyUs_EMjX {
@@ -185,6 +199,11 @@
         margin-top: var(--text) !important;
     }
     
+    /*List View | Gradient*/
+    .Grouping-styles__title::after {
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--grey) 0%) !important;
+    }
+    
     /*=======DASHBOARD TEXT BACKGROUND=======*/
     .ic-Dashboard-header__layout {
         border-bottom: 1px solid var(--text) !important;
@@ -239,6 +258,12 @@
     #right-side .right-side-list li em,
     #right-side .right-side-list li p {
         color: var(--text) !important;
+        background: var(--grey) !important;
+    }
+    
+    /*Recent Feeback Background Top*/
+    #right-side .right-side-list .recent_feedback_title {
+        background: var(--grey) !important;
     }
 
     /*COURSES=======================================================*/
@@ -643,7 +668,7 @@
         z-index: 1000;
         border: 1px solid var(--text) !important
         box-shadow: 2px 2px 10px rgba(0,0,0,0.6);
-        background-color: var(--light-grey) !important;
+        background-color: var(--grey) !important;
         color: var(--text) !important;
         min-width: 320px;
         max-width: 500px;

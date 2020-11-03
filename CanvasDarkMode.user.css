@@ -1,15 +1,15 @@
 /* ==UserStyle==
 @name        myLearning Dark Mode
 @namespace   soupyzinc
-@version     1.1.3
+@version     1.1.4
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/**v1.1.3 | Last Updated: 2 November 2020 | 6:01 PM EST
- * -Survery is in dark mode.
+/**v1.1.4 | Last Updated: 2 November 2020 | 8:27 PM EST
+ * Quiz and quiz reveiw are now in dark mode.
  */
 @-moz-document domain("instructure.com") {
     :root {
@@ -415,6 +415,12 @@
     /*Question Body*/
     .question .text {
         background: var(--light-grey) !important;
+    }
+    
+    /*Quiz Viewing*/
+    .quiz-submission, .question_editing {
+        background: var(--grey) !important;
+        border: 1px solid var(--text) !important;
     }
     
     /*=======GRADES=======*/

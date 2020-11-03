@@ -1,16 +1,15 @@
 /* ==UserStyle==
 @name        myLearning Dark Mode
 @namespace   soupyzinc
-@version     1.1.5
+@version     1.1.6
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/**v1.1.5 | Last Updated: 2 November 2020 | 8:27 PM EST
- * Removed gradient on recent feedback.
- * Remobed gradient on list view class titles.
+/**v1.1.6 | Last Updated: 3 November 2020 | 7:15 AM EST
+ * Fixed date headers in the calendar assignment view.
  */
 @-moz-document domain("instructure.com") {
     :root {
@@ -707,5 +706,18 @@
     /*Calendar Agenda*/
     .agenda-wrapper {
         background-color: var(--grey) !important;
+    }
+    
+    /*Calednar Agenda Today Header*/
+    .agenda-day.agenda-today {
+        background: var(--light-grey) !important;
+    }
+    
+    .agenda-day {
+        display: block;
+        border-bottom: 1px solid var(--text) !important;
+        margin-top: 24px;
+        padding: 6px;
+        background: var(--grey) !important;
     }
 }

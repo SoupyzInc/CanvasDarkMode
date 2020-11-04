@@ -1,15 +1,16 @@
 /* ==UserStyle==
 @name        myLearning Dark Mode
 @namespace   soupyzinc
-@version     1.1.6
+@version     1.1.7
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/**v1.1.6 | Last Updated: 3 November 2020 | 7:15 AM EST
- * Fixed date headers in the calendar assignment view.
+/**v1.1.7 | Last Updated:43 November 2020 | 7:23 AM EST
+ * -Fixed inbox.
+ * -Fixed most white drop down boxes.
  */
 @-moz-document domain("instructure.com") {
     :root {
@@ -719,5 +720,95 @@
         margin-top: 24px;
         padding: 6px;
         background: var(--grey) !important;
+    }
+    
+    /*INBOX==================*/
+    /*Inbox Header*/
+    .conversations .panel {
+        box-sizing: border-box;
+        background: var(--grey) !important;
+        border-bottom: 1px solid var(--text) !important;
+        height: 60px !important;
+        padding: 12px;
+    }
+    
+    /*Buttons*/
+    .conversations .panel .panel__secondary>div {
+        margin-top: 0;
+        background: var(--light-grey) !important;
+    }
+    
+    /*Search Bar*/
+    .ac-input-box {
+        background: var(--light-grey) !important;
+        border: 1px solid var(--text) !important;
+        border-radius: 3px 0 0 3px;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.075) inset;
+        box-sizing: border-box;
+        cursor: text;
+        min-height: 30px;
+        overflow: hidden;
+        padding: 8px;
+        position: relative;
+        transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+        width: 100%;
+    }
+    
+    /*Message Recepeients*/
+    .ac-token {
+        background: var(--grey) !important;
+        border: 1px solid var(--text) !important;
+        border-radius: 14px;
+        box-sizing: border-box;
+        cursor: default;
+        display: inline-block;
+        line-height: normal;
+        margin: 2px 4px 2px 0;
+        overflow: hidden;
+        padding: 0 18px 0 8px;
+        position: relative;
+        vertical-align: middle;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 85%;
+    }
+    
+    /*Contact List*/
+    .ac-result-container {
+        background: var(--light-grey) !important;
+        border: 1px solid var(--text) !important;
+        border-radius: 10px;
+        box-sizing: border-box;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        font-size: 14px;
+        font-size: .875rem;
+        max-height: 250px;
+        min-height: 50px;
+        left: 0;
+        overflow: auto;
+        position: absolute;
+        top: 36px;
+        width: 100%;
+        z-index: 2;
+    }
+    
+    /*Messges*/
+    .message-list .messages>li {
+        background: var(--grey) !important;
+        box-sizing: border-box;
+        cursor: pointer;
+        height: 140px;
+        padding: 20px 10px;
+        border-bottom: 1px solid var(--text) !important;
+        display: flex;
+        overflow: hidden;
+    }
+    
+    /*White Drope Down | Message Filter*/
+        select {
+        width: 220px;
+        border: 1px solid var(--text) !important;
+        background-color: var(--grey) !important;
+        color: var(--text) !important;
     }
 }

@@ -1,7 +1,7 @@
 # Canvas/myLearning Dark Mode
 A Stylus extension to give Canvas/myLearning a dark mode so your retinas don't have to burn out. Scroll down to see install instructions.
 
-*I do not have access to the administrative view; any APs/teachers wanting to use this may experience graphical bugs.
+*I do not have access to the administrative view; any APs/teachers wanting to use this may experience graphical bugs.*
 
 <p align="left">
 <img src="https://github.com/SoupyzInc/CanvasDarkMode/blob/main/images/Dashboardv1.1.5.png" alt="alt text" height="300">

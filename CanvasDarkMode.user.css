@@ -1,15 +1,19 @@
 /* ==UserStyle==
 @name        myLearning Dark Mode
 @namespace   soupyzinc
-@version     1.1.9
+@version     1.2.0
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/**v1.1.9 | Last Updated: 9 November 2020 | 8:57 AM EST
- * -Fixed quiz submission details
+/**v1.2.0 | Last Updated: 9 November 2020 | 11:12 AM EST
+ * -Fixed rubric table headers.
+ * 
+ * -Fixing .event-details intereference issues (Line 672).
+ * -Need to begin separating code for each different tab.
+ * -Need to regex different links.
  */
 @-moz-document domain("instructure.com") {
     :root {
@@ -408,6 +412,20 @@
         transition: border linear 0.2s, box-shadow linear 0.2s;
         color: var(--text) !important;
     }
+    
+    /*Rubric/Table Title Row*/
+    .rubric_container .rubric_title {
+        background-color: var(--grey) !important;
+        border-top: 1px solid var(--text) !important;
+        border-left: 1px solid var(--text) !important;
+        border-right: 1px solid var(--text) !important;
+        padding: 5px;
+        font-weight: bold;
+    }
+    /*Assignments Tab | Rubric/Table Header*/
+        .rubric_container thead th {
+        background-color: var(--grey) !important;
+    }
 
     /*Assignments Tab | Peer Review Menu File View*/
     .file-upload-submission {
@@ -666,8 +684,8 @@
         border: 1px solid #384249;
         background: var(--light-grey) !important;
     }
-    
-    /*Preview Selected Event*/
+   
+    /*Preview Selected Event | INTERFERES WITH RECENT FEEDBACK ON DASHBOARD*/
     .event-details {
         position: absolute;
         z-index: 1000;

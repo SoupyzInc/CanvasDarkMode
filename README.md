@@ -19,7 +19,8 @@ A Stylus extension to give Canvas/myLearning a dark mode so your retinas don't h
 ## Fix List
 Stuff I plan to fix next in order of priority (not absolute).
 
-- [All other known issues](https://github.com/SoupyzInc/CanvasDarkMode/issues).
+- [Reogranizing the code so that each section of Canvas has its own style sheet.](https://github.com/SoupyzInc/CanvasDarkMode/issues/12)
+- [All other known issues.](https://github.com/SoupyzInc/CanvasDarkMode/issues)
 
 
 <p align="right">

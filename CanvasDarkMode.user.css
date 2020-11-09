@@ -1,15 +1,15 @@
 /* ==UserStyle==
 @name        myLearning Dark Mode
 @namespace   soupyzinc
-@version     1.1.8
+@version     1.1.9
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/**v1.1.8 | Last Updated: 5 November 2020 | 5:45 PM EST
- * -Fixed syntax error
+/**v1.1.9 | Last Updated: 9 November 2020 | 8:57 AM EST
+ * -Fixed quiz submission details
  */
 @-moz-document domain("instructure.com") {
     :root {
@@ -445,6 +445,12 @@
     .quiz-submission, .question_editing {
         background: var(--grey) !important;
         border: 1px solid var(--text) !important;
+    }
+    
+    /*Quiz Submission Details*/
+    table.summary td, table.summary tbody th {
+        border-bottom: 1px solid var(--text) !important;
+        background-color: var(--grey) !important;
     }
     
     /*=======GRADES=======*/

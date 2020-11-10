@@ -1,19 +1,15 @@
 /* ==UserStyle==
 @name        myLearning Dark Mode
 @namespace   soupyzinc
-@version     1.2.0
+@version     1.2.1
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/**v1.2.0 | Last Updated: 9 November 2020 | 11:12 AM EST
- * -Fixed rubric table headers.
- * 
- * -Fixing .event-details intereference issues (Line 672).
- * -Need to begin separating code for each different tab.
- * -Need to regex different links.
+/**v1.2.1 | Last Updated: 9 November 2020 | 8:01 PM EST
+ * -Fixed non published course tables.
  */
 @-moz-document domain("instructure.com") {
     :root {
@@ -31,6 +27,11 @@
     body {
         background: var(--grey) !important;
         color: var(--text) !important;
+    }
+    
+    /*All Courses Non Published Table*/
+    .course-list-unpublished-course-row {
+        background: var(--grey) !important;
     }
     
     /*myLearning Logo*/

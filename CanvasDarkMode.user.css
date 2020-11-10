@@ -1,161 +1,242 @@
 /* ==UserStyle==
 @name        Regex Patch
 @namespace   soupyzinc
-@version     1.0.1
+@version     1.0.2
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
+@updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/Regex-Patch/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/**v1.0.1 | Last Updated: 9 November 2020 | 9:22 PM EST
- * -Regex matched all needed links.
+/**v1.0.2 | Last Updated: 10 November 2020 | 12:31 PM EST
+ * -Finished Dashboard Style Sheet.
+ * -Added @updateURL.
  * 
- * -Need to clean up style sheet.
- * -Need to begin add darkmode style sheet.
+ * -Need to finish other style sheets.
  */
-
-:root {
+@-moz-document regexp(".*instructure\.com.*") { /*Dashboard*/
+    :root {
         --dark-grey: #1d1e21 !important; /*Darker Background Color*/
         --grey: #23272A !important; /*Normal Bakground Color*/
         --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
         --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
         --text: #d7d7d7!important; /*Text Color & Highlights*/
-    
+        --sub-text: #a7a7a7!important; /*Sub Text Color*/
+        
         --yyQPt-background: #2C2F33 !important; /*Discussion List View Check Box Background*/
     }
-@-moz-document regexp(".*instructure\.com.*") { /*Dashboard*/
+    
+    /*NAV PANEL========================================================================================================*/
+    /*Nav Panel | Background*/
+    .ic-app-header {
+        background-color: var(--dark-grey) !important;
+    }
+
+    /*Nav Panel | Selected Icon Background*/
+    .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link {
+        background: var(--light-grey) !important;
+    }
+
+    /*Nav Panel | Account Panel | Background*/
+    [dir="ltr"] .fLzZc_bxia {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Background*/
+    .MYpOQ_bGBk {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Course Nick Name*/
+    a.fbyHH_bGBk, button.fbyHH_bGBk {
+        color: var(--text) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Full Course Name*/
+    .cjUyb_bGBk.cjUyb_eQnG, input.cjUyb_bGBk[type].cjUyb_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Course Name & Date*/
+    .enRcg_bGBk.enRcg_eQnG, input.enRcg_bGBk[type].enRcg_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Icon*/
+    .fOyUs_bGBk {
+        color: var(--text) !important;
+    }
+
+    /*ALL VIEWS========================================================================================================*/
     /*Most Backgrounds and Text*/
     body {
         background: var(--grey) !important;
         color: var(--text) !important;
     }
     
-    /*All Courses Non Published Table*/
-    .course-list-unpublished-course-row {
+    /*Dashboard Header*/
+    .ic-Dashboard-header__layout {
+        border-bottom: 1px solid var(--text) !important;
         background: var(--grey) !important;
     }
-    
-    /*Remove myLearning Logo*/
-    .ic-sidebar-logo__image {
-        max-height: 0px !important;
-    }
-    
-    /*Remove Pasco County Logo*/
+
+    /*Remove Pasco County Logo (Top Left; Card and Recent Activity Only)*/
     .ic-app-header__logomark {
         height: 0px!important;
     }
     
-    /*Remove myLearning Water Mark*/
-    .ic-Layout-watermark {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        z-index: -1;
-        width: 0 !important;
-        height: 100%;
-        opacity: var(--ic-brand-watermark-opacity);
-        background-image: var(--ic-brand-watermark);
-        background-repeat: no-repeat;
-        background-position: left bottom;
+    /*Remove myLearning Logo (Top Right)*/
+    .ic-sidebar-logo__image {
+        height: 0px !important;
     }
     
-    /*Error Message*/
+    /*Remove myLearning Water Mark (Bottom Left)*/
+    .ic-Layout-watermark {
+        height: 0 !important;
+    }
+    
+    /*Three Dots Context Menu (Top Right)*/
+    .sJGfW_blJt {
+        background: var(--light-grey) !important;
+        color: var(--text) !important;
+    }
+    
+    /*Pop-Up Error Message*/
     .cvphu_bgqc {
         background: var(--dark-grey) !important;
         color: var(--text) !important;
     }
     
-    /*Announcement*/
+    /*Pop-Up Announcement*/
     .ic-notification__content {
         background: var(--grey) !important;
     }
     
-    /*TTS Button*/
+    /*Side Nav Panel Selected Item Color*/
+    .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-icon-svg {
+        fill: var(--dark-grey) !important;
+    }
+    
+    /*TTS Button (Bottom Left)*/
     .rspopup {
         background: var(--light-grey) !important;
         box-shadow: 0 0 5px #000 !important;
         color: var(--text) !important;
     }
     
-    .eoNrR_blJt {
-        background: var(--grey) !important;
-        color: var(--text) !important;
-    }
-    
-    /*Dashboard View Selection Options*/
-    .sJGfW_blJt {
-        background: var(--light-grey) !important;
-        color: var(--text) !important;
-    }
-    
-    /*Recent Feedback Gradient*/
+    /*CARD VIEW & RECENT ACTIVITY======================================================================================*/
+    /*Remove White Gradient on Recent Feedback (Bottom Right)*/
     #right-side .events_list .event-details:after, #right-side .events_list .todo-details:after, #right-side .to-do-list .event-details:after, #right-side .to-do-list .todo-details:after {
         background: linear-gradient(to right, rgba(255,255,255,0) 0%, var(--grey) 0%) !important;
     }
-    
-    
-    #right-side .right-side-list li em, #right-side .right-side-list li p {
-        color: var(--text) !important;
-        background: var(--grey);
+
+    /*Card | Text Background*/
+    .ic-DashboardCard__header_content {
+        background: var(--light-grey) !important;
     }
-        
-    /*Card 3 Dots Menu | Footer*/
-    [dir="ltr"] .fOyUs_EMjX {
-        background: var(--grey) !important;
+
+    /*Card | Icon Background*/
+    .ic-DashboardCard {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        background: var(--light-grey) !important;
     }
     
-    /*Card 3 Dots Menu | Unselected Tab Header Background*/
+    /*Card Context Menu | Unselected Tab Header Background*/
     .XBLto_bXVH {
         background: var(--grey) !important;
         color: var(--text) !important;
     }
     
-    /*Card 3 Dots Menu | Unselected Tab Header Text*/
+    /*Card Context Menu | Unselected Tab Header Text*/
     [dir="ltr"] .bdYPe_eLeB {
         margin-right: 0.2em;
         color: var(--text) !important;
     }
     
-    /*Move Tab Header*/
-    .bdYPe_eLeB:not([aria-selected]):not([aria-disabled]):hover, .bdYPe_eLeB[aria-selected] {
-        background: var(--light-grey) !important;
+    /*Card Context Menu | Footer*/
+    [dir="ltr"] .fOyUs_EMjX {
+        background: var(--grey) !important;
     }
     
-    /*Move Tab Background (top and bottom sliver)*/
-    .cAqHo_eAjd {
-        background: var(--light-grey) !important;
-    }
-    
-    /*Move Tab | Move Button*/
-    .sJGfW_bGBk {
-        background: var(--light-grey) !important;
-    }
-    
-    /*Move Tab | Move Button Icon*/
-    .esvoZ_drOs {
-        color: var(---dark-grey) !important;
-    }
-    
-    /*Card 3 Dots Menu | Color Tab Header*/
+    /*Card Context Menu | Color Tab Header*/
     [dir="ltr"] .bdYPe_eLeB:first-of-type {
         background: var(--light-grey) !important;
         color: var(--text) !important;
     }
-     
-    /*Color Picker Sides*/
-    .DashboardCardMenu__ColorPicker {
-        background: var(--grey) !important;
-    }
     
-    /*Color Picker Body*/
+    /*Card Context Menu | Color Picker Body*/
     .ColorPicker__Container {
         background: var(--grey) !important;
     }
+     
+    /*Card Context Menu | Color Picker Sides*/
+    .DashboardCardMenu__ColorPicker {
+        background: var(--grey) !important;
+    }
+
+    /*Card Context Menu | Move Tab Header*/
+    .bdYPe_eLeB:not([aria-selected]):not([aria-disabled]):hover, .bdYPe_eLeB[aria-selected] {
+        background: var(--light-grey) !important;
+    }
     
-    /*Check Mark Background*/
+    /*Card Context Menu | Move Tab Background (Top and Bottom Sliver)*/
+    .cAqHo_eAjd {
+        background: var(--light-grey) !important;
+    }
+    
+    /*Card Context Menu | Move Tab | Move Buttons*/
+    .sJGfW_bGBk {
+        background: var(--light-grey) !important;
+    }
+    
+    /*Recent Feedback | Sub Text*/
+    #right-side .right-side-list li em,
+    #right-side .right-side-list li p {
+        color: var(--text) !important;
+        background: var(--grey) !important;
+    }
+    
+    /*Recent Feeback*/
+    #right-side .right-side-list .recent_feedback_title {
+        background: var(--grey) !important;
+        color: var(--text) !important;
+    }
+    
+    /*Recent Feedback | "at least XX more assignments"*/
+    #right-side .right-side-list li:last-child a {
+        color: var(--text) !important;
+        border-bottom: none;
+        box-shadow: none;
+    }
+    
+    /*To Do Text*/
+    .eHiXd_brAJ, a.eHiXd_brAJ, button.eHiXd_brAJ, button.eHiXd_brAJ[type="button"], button.eHiXd_brAJ[type="reset"], button.eHiXd_brAJ[type="submit"] {
+        color: var(--text) !important;
+    }
+    
+    /*View Grades Button*/
+    #right-side .button-sidebar-wide {
+        text-align: left;
+        margin: 5px auto;
+        display: block;
+        background: var(--light-grey) !important;
+        color: var(--text) !important;
+    }
+    
+    /*Icons (To Do Icons, Card Icons)*/
+    .esvoZ_drOs {
+        color: var(--text) !important;
+    }
+    
+    /*LIST VIEW========================================================================================================*/
+    /*List View | Background*/
+    .Day-styles__root {
+        color: var(--text) !important;
+        background: var(--grey) !important;
+    }
+    
+    /*List View | Top Right Icons*/
     .eHiXd_bPzo.eHiXd_ycrn, a.eHiXd_bPzo.eHiXd_ycrn, button.eHiXd_bPzo.eHiXd_ycrn, button.eHiXd_bPzo[type="button"].eHiXd_ycrn, button.eHiXd_bPzo[type="reset"].eHiXd_ycrn, button.eHiXd_bPzo[type="submit"].eHiXd_ycrn {
-        height: var(--eHiXd-mediumHeight);
-        width: var(--eHiXd-mediumHeight);
         color: var(--text) !important;
     }
     
@@ -165,34 +246,21 @@
         color: var(--text) !important;
     }
     
-    /*Dashboard Side Panel Selected Item Color*/
-    .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-icon-svg {
-        fill: var(--dark-grey) !important;
+    /*List View | Remove Gradient In Class Name Background*/
+    .Grouping-styles__title::after {
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--grey) 0%) !important;
     }
     
-    /*List View Background*/
-    .Day-styles__root {
-        color: var(--text) !important;
-        background: var(--grey) !important;
-    }
-    
-    /*List View Top Bar Icons (right)*/
-    .PlannerHeader-styles__root {
-        color: var(--text) !important;
-        background: var(--grey) !important;
-    }
-    
-    /*List View Ellipses*/
-    element.style {
-        background: var(--grey) !important;
-        color: var(--text) !important;
-    }
-    
-    /*List View | Today Button*/
+    /*List View | Today Button (Top Right)*/
     .eHiXd_eYmo, a.eHiXd_eYmo, button.eHiXd_eYmo, button.eHiXd_eYmo[type="button"], button.eHiXd_eYmo[type="reset"], button.eHiXd_eYmo[type="submit"] {
         background: var(--light-grey) !important;
         border-color: var(--text) !important;
         color: var(--text) !important;
+    }
+    
+    /*List View | Buttons (Top Right)*/
+    .PlannerHeader-styles__root {
+        background: var(--grey) !important;
     }
     
     /*List View | Nothing Planned Yet Background*/
@@ -200,74 +268,7 @@
         color: var(--text) !important;
         background: var(--grey) !important;
         margin-top: var(--text) !important;
-    }
-    
-    /*List View | Gradient*/
-    .Grouping-styles__title::after {
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--grey) 0%) !important;
-    }
-    
-    /*=======DASHBOARD TEXT BACKGROUND=======*/
-    .ic-Dashboard-header__layout {
-        border-bottom: 1px solid var(--text) !important;
-        background: var(--grey) !important;
-    }
-
-    /*=======SIDE BOARD PANEL=======*/
-    /*Side Board Panel Background*/
-    .ic-app-header {
-        background-color: var(--dark-grey) !important;
-    }
-
-    /*Selected Side Board Panel Background*/
-    .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link {
-        background: var(--light-grey) !important;
-    }
-
-    /*Courses Sub Tab Background*/
-    .MYpOQ_bGBk {
-        background: var(--grey) !important;
-    }
-
-    /*Profile Sub Tab Background*/
-    [dir="ltr"] .fLzZc_bxia {
-        background: var(--grey) !important;
-    }
-
-    /*=======CLASS CARD BACKGROUNDS=======*/
-    /*Card Text Background*/
-    .ic-DashboardCard__header_content {
-        background: var(--light-grey) !important;
-    }
-
-    /*Bottom Card Tray*/
-    .ic-DashboardCard {
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        background: var(--light-grey) !important;
-    }
-
-    /*=======ACCOUNT MENU BACKGROUND=======*/
-    Style Attribute {
-        --fLzZc-smallWidth: 28em;
-        background: var(--light-grey) !important;
-    }
-
-    element.style {
-        --fLzZc-smallWidth: 28em;
-        background: var(--light-grey) !important;
-    }
-
-    /*Recent Feedback Sub Text*/
-    #right-side .right-side-list li em,
-    #right-side .right-side-list li p {
-        color: var(--text) !important;
-        background: var(--grey) !important;
-    }
-    
-    /*Recent Feeback Background Top*/
-    #right-side .right-side-list .recent_feedback_title {
-        background: var(--grey) !important;
-    }
+    } 
 }
 
 @-moz-document regexp(".*instructure\.com\/courses.*") { /*Course Home*/

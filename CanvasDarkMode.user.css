@@ -1,15 +1,15 @@
 /* ==UserStyle==
 @name        myLearning Dark Mode
 @namespace   soupyzinc
-@version     1.2.2
+@version     1.2.3
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
-@author      Matthew Okashita
+@author      Matthew Okashita & Ryan Trinh
 ==/UserStyle== */
-/**v1.2.2 | Last Updated: 11 November 2020 | 8:48 PM EST
- * -Added comments for hotfixes.
+/**v1.2.3 | Last Updated: 11 November 2020 | 9:40 PM EST
+ * -Fixed course filter in inbox tab.
  */
 @-moz-document domain("instructure.com") {
     :root {
@@ -18,6 +18,7 @@
         --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
         --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
         --text: #d7d7d7!important; /*Text Color & Highlights*/
+        --sub-text: #a7a7a7!important; /*Sub Text Color*/
     
         --yyQPt-background: #2C2F33 !important; /*Discussion List View Check Box Background*/
     }
@@ -837,4 +838,30 @@
     }
     
     /*Hot Fixes================================================================*/
+    
+    /*Inbox Tab | Course Filter Caret*/
+    .caret {
+        border-top: 4px solid var(--text) !important;
+    }
+    
+    /*Inbox Tab | Course Filter Drop Down Item Wrapper*/
+    .dropdown-menu.open {
+        background: var(--grey) !important;
+    }
+    
+    /*Inbox Tab | Course Filter Drop Down Item*/
+    .dropdown-menu li>a {
+        background: var(--grey) !important;
+    }
+    
+    /*Inbox Tab | Course Filter Thing*/
+    .btn-group .div-contain {
+        background: var(--grey) !important;
+    }
+    
+    /*Inbox Tab | Course Fiter Line*/
+    .dropdown-menu .divider {
+        border-bottom: 1px solid var(--sub-text) !important;
+        background: #ffffff00 !important;
+    }
 }

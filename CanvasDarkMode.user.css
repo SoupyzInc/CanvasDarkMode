@@ -1,15 +1,15 @@
 /* ==UserStyle==
 @name        myLearning Dark Mode
 @namespace   soupyzinc
-@version     1.2.1
+@version     1.2.2
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/**v1.2.1 | Last Updated: 9 November 2020 | 8:01 PM EST
- * -Fixed non published course tables.
+/**v1.2.2 | Last Updated: 11 November 2020 | 8:48 PM EST
+ * -Added comments for hotfixes.
  */
 @-moz-document domain("instructure.com") {
     :root {
@@ -829,10 +829,12 @@
     }
     
     /*White Drope Down | Message Filter*/
-        select {
+    select {
         width: 220px;
         border: 1px solid var(--text) !important;
         background-color: var(--grey) !important;
         color: var(--text) !important;
     }
+    
+    /*Hot Fixes================================================================*/
 }

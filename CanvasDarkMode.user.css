@@ -1,15 +1,16 @@
 /* ==UserStyle==
 @name        myLearning Dark Mode
 @namespace   soupyzinc
-@version     1.2.3
+@version     1.2.4
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita & Ryan Trinh
 ==/UserStyle== */
-/**v1.2.3 | Last Updated: 11 November 2020 | 9:40 PM EST
- * -Fixed course filter in inbox tab.
+/**v1.2.4 | Last Updated: 11 November 2020 | 9:54 PM EST
+ * -Fixed discussion reply file attatchment.
+ * -Fixed issue: https://github.com/SoupyzInc/CanvasDarkMode/issues/14
  */
 @-moz-document domain("instructure.com") {
     :root {
@@ -863,5 +864,10 @@
     .dropdown-menu .divider {
         border-bottom: 1px solid var(--sub-text) !important;
         background: #ffffff00 !important;
+    }
+    
+    /*Discussion Reply File Attatchment*/
+    .dXATK_cAug:hover, .dXATK_cAug[aria-disabled], .dXATK_cAug[aria-selected] {
+        color: var(--text) !important;
     }
 }

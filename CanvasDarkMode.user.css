@@ -1,17 +1,17 @@
 /* ==UserStyle==
 @name        Regex Patch
 @namespace   soupyzinc
-@version     1.0.3
+@version     1.0.4
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/Regex-Patch/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/**v1.0.3 | Last Updated: 12 November 2020 | 8:12 PM EST
- * -Began adding vars and nav panel to all pages.
+/**v1.0.4 | Last Updated: 12 November 2020 | 9:30 PM EST
+ * -Finished assignments page.
  */
-@-moz-document regexp(".*instructure\.com\/") { /*Dashboard*/
+@-moz-document regexp(".*instructure\.com\/(\?login_success=1)?") { /*Dashboard*/
     :root {
         --dark-grey: #1d1e21 !important; /*Darker Background Color*/
         --grey: #23272A !important; /*Normal Bakground Color*/
@@ -686,16 +686,18 @@
     }
 }
 
-@-moz-document regexp(".*instructure\.com.*assignments") { /*Course Assignments*/
+@-moz-document regexp(".*instructure\.com.*assignments.*") { /*Course Assignments*/
     :root {
         --dark-grey: #1d1e21 !important; /*Darker Background Color*/
         --grey: #23272A !important; /*Normal Bakground Color*/
         --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
         --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
-        --text: #d7d7d7!important; /*Text Color & Highlights*/
-        --sub-text: #a7a7a7!important; /*Sub Text Color*/
+        --text: #d7d7d7 !important; /*Text Color & Highlights*/
+        --sub-text: #a7a7a7 !important; /*Sub Text Color*/
         
-        --yyQPt-background: #2C2F33 !important; /*Discussion List View Check Box Background*/
+        /*--fOyUs-focusColorInfo: #d7d7d7 !important; /*Green Highlight Color*/
+        --ic-brand-primary-lightened-15: #d7d7d7 !important; /*Header Bar | Grading Period Filter/Serach Bar Select Color*/
+        --fNHEA-focusBorderColor: #d7d7d7 !important; /*Header Bar | Show By Date/Show By Type Select Color*/
     }
 
     /*NAV PANEL========================================================================================================*/
@@ -747,6 +749,170 @@
     /*Nav Panel | Recent History Panel | Icon*/
     .fOyUs_bGBk {
         color: var(--text) !important;
+    }
+    
+    /*Remove myLearning Water Mark (Bottom Left)*/
+    .ic-Layout-watermark {
+        height: 0 !important;
+    } 
+    
+    /*ASSIGNMENTS OVERVIEW=============================================================================================*/
+    /*Most Backgrounds and Text*/
+    body {
+        background: var(--grey) !important;
+        color: var(--text) !important;
+    }
+    
+    /*Link Color*/
+    a {
+        color: var(--text) !important;
+    }
+    
+    /*Hamburger Icon*/
+    .ic-app-course-nav-toggle i[class*=icon-], .ic-app-course-nav-toggle i[class^=icon-] {
+        color: var(--text) !important;
+    }
+    
+    /*Directory (Top Left)*/
+    #breadcrumbs>ul {
+        background: var(--grey) !important;
+    }
+    
+    /*Header Bar*/
+    .header-bar {
+        border-bottom: 1px solid var(--text) !important;
+        background-color: var(--grey) !important;
+    }
+    
+    /*Grading Period Filter*/
+    select.ic-Input {
+        background-color: var(--light-grey) !important;
+        color: var(--text) !important;
+        background-image: url(/dist/images/forms/ic-icon-arrow-down-0a55c3d1bf.svg);
+        background-repeat: no-repeat;
+        background-size: 10px 5.667px;
+        background-position: calc(100% - 8px) 50%;
+        padding: 0 24px 0 12px;
+    }
+    
+    /*Assignment Search Bar*/
+    select.ic-Input, 
+    textarea.ic-Input, 
+    input[type="text"].ic-Input, 
+    input[type="password"].ic-Input, 
+    input[type="datetime"].ic-Input, 
+    input[type="datetime-local"].ic-Input, 
+    input[type="date"].ic-Input, 
+    input[type="month"].ic-Input, 
+    input[type="time"].ic-Input, 
+    input[type="week"].ic-Input, 
+    input[type="number"].ic-Input, 
+    input[type="email"].ic-Input, 
+    input[type="url"].ic-Input, 
+    input[type="search"].ic-Input, 
+    input[type="tel"].ic-Input, 
+    input[type="color"].ic-Input, 
+    .uneditable-input.ic-Input {
+        background: var(--light-grey) !important;
+        border-color: var(--text) !important;
+    }
+    
+    /*Show By Date/Show By Type Selected Box*/
+    .fNHEA_cjSw.fNHEA_ksNK .fNHEA_cSXm {
+        background-color: var(--light-grey) !important;
+    }
+    
+    /*Show By Date/Show By Type Text*/
+    .fNHEA_blJt {
+        color: var(--sub-text) !important;
+    }
+    
+    /*List Background*/
+    .item-group-container {
+        background: var(--grey) !important;
+    }
+    
+    /*List Header*/
+    .item-group-condensed .ig-header {
+        background-color: var(--light-grey) !important;
+        border: 1px solid var(--text) !important;
+        color: var(--text) !important;
+    }
+    
+    /*List Header Text*/
+    button.element_toggler {
+        color: var(--text) !important;
+    }
+    
+    /*List Item*/
+    .item-group-condensed .ig-row {
+        background: var(--grey) !important;
+        border-bottom: 1px solid var(--text) !important;
+    }
+    
+    /*List Item Symbol*/
+    i[class*=icon-], i[class^=icon-] {
+        color: var(--text) !important;
+    }
+    
+    /*List Item Details*/
+    .ig-details {
+        color: var(--sub-text) !important;
+    }  
+    
+    /*INDIVIDUAL ASSIGNMENT============================================================================================*/
+    /*Submission Status Text*/
+        #right-side .details .header {
+        color: var(--text) !important;
+        font-weight: bold;
+    }
+    
+    /*Submission Box | Selected Tab*/
+    .ui-tabs .ui-tabs-nav li.ui-tabs-active, .ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-hover, .ui-tabs .ui-tabs-nav li.ui-tabs-active:hover {
+        border-color: var(--text) !important;
+        background: var(--grey) !important;
+    }
+    
+    /*Submission Box*/
+    .ui-tabs .ui-tabs-panel {
+        background-color: var(--grey) !important;
+        color: var(--text) !important;
+    }
+    
+    /*Office 365 Login Message*/
+    .ms-font-m {
+        color: var(--text) !important;
+    }
+    
+    /*Comment Box*/
+    textarea, input[type="text"], 
+    input[type="password"], 
+    input[type="datetime"], 
+    input[type="datetime-local"], 
+    input[type="date"], input[type="month"], 
+    input[type="time"], input[type="week"], 
+    input[type="number"], input[type="email"], 
+    input[type="url"], input[type="search"], 
+    input[type="tel"], input[type="color"], 
+    .uneditable-input {
+        background-color: var(--light-grey) !important;
+        border: 1px solid var(--text) !important;
+        color: var(--text) !important;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+        transition: border linear 0.2s,box-shadow linear 0.2s;
+    }
+    
+    /*Footer*/
+    .module-sequence-footer .module-sequence-footer-content {
+        background: var(--grey) !important;
+        border-top: 1px solid var(--text) !important;
+    }
+    
+    /*Previous/Next Buttons*/
+    .btn, .Button, .ui-button {
+        background: var(--light-grey) !important;
+        color: var(--text) !important;
+        border-color: var(--text) !important;
     }
 }
 

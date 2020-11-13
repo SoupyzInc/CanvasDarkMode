@@ -1,32 +1,35 @@
 /* ==UserStyle==
 @name        Regex Patch
 @namespace   soupyzinc
-@version     1.0.2
+@version     1.0.3
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/Regex-Patch/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita
 ==/UserStyle== */
-/**v1.0.2 | Last Updated: 10 November 2020 | 12:31 PM EST
- * -Finished Dashboard Style Sheet.
- * -Added @updateURL.
- * 
- * -Need to finish other style sheets.
+/**v1.0.3 | Last Updated: 12 November 2020 | 8:12 PM EST
+ * -Began adding vars and nav panel to all pages.
  */
-@-moz-document regexp(".*instructure\.com.*") { /*Dashboard*/
+@-moz-document regexp(".*instructure\.com\/") { /*Dashboard*/
     :root {
         --dark-grey: #1d1e21 !important; /*Darker Background Color*/
         --grey: #23272A !important; /*Normal Bakground Color*/
         --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
         --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
-        --text: #d7d7d7!important; /*Text Color & Highlights*/
-        --sub-text: #a7a7a7!important; /*Sub Text Color*/
+        --text: #d7d7d7 !important; /*Text Color & Highlights*/
+        --sub-text: #a7a7a7 !important; /*Sub Text Color*/
         
+        --fOyUs-focusColorInfo: #d7d7d7 !important; /*Green Highlight Color*/
         --yyQPt-background: #2C2F33 !important; /*Discussion List View Check Box Background*/
     }
-    
+
     /*NAV PANEL========================================================================================================*/
+    /*Remove Pasco County Logo (Top Left; Card and Recent Activity Only)*/
+    .ic-app-header__logomark {
+        height: 0px!important;
+    }
+    
     /*Nav Panel | Background*/
     .ic-app-header {
         background-color: var(--dark-grey) !important;
@@ -66,7 +69,7 @@
     .fOyUs_bGBk {
         color: var(--text) !important;
     }
-
+    
     /*ALL VIEWS========================================================================================================*/
     /*Most Backgrounds and Text*/
     body {
@@ -80,11 +83,6 @@
         background: var(--grey) !important;
     }
 
-    /*Remove Pasco County Logo (Top Left; Card and Recent Activity Only)*/
-    .ic-app-header__logomark {
-        height: 0px!important;
-    }
-    
     /*Remove myLearning Logo (Top Right)*/
     .ic-sidebar-logo__image {
         height: 0px !important;
@@ -272,73 +270,718 @@
 }
 
 @-moz-document regexp(".*instructure\.com\/courses.*") { /*Course Home*/
-    body {
-        background: #ff6c00 !important;
+    :root {
+        --dark-grey: #1d1e21 !important; /*Darker Background Color*/
+        --grey: #23272A !important; /*Normal Bakground Color*/
+        --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
+        --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
+        --text: #d7d7d7!important; /*Text Color & Highlights*/
+        --sub-text: #a7a7a7!important; /*Sub Text Color*/
+        
+        --fOyUs-focusColorInfo: #d7d7d7 !important; /*Green Highlight Color*/
+        --yyQPt-background: #2C2F33 !important; /*Discussion List View Check Box Background*/
+    }
+
+    /*NAV PANEL========================================================================================================*/
+    /*Remove Pasco County Logo (Top Left; Card and Recent Activity Only)*/
+    .ic-app-header__logomark {
+        height: 0px!important;
+    }
+    
+    /*Nav Panel | Background*/
+    .ic-app-header {
+        background-color: var(--dark-grey) !important;
+    }
+
+    /*Nav Panel | Selected Icon Background*/
+    .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link {
+        background: var(--light-grey) !important;
+    }
+
+    /*Nav Panel | Account Panel | Background*/
+    [dir="ltr"] .fLzZc_bxia {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Background*/
+    .MYpOQ_bGBk {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Course Nick Name*/
+    a.fbyHH_bGBk, button.fbyHH_bGBk {
+        color: var(--text) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Full Course Name*/
+    .cjUyb_bGBk.cjUyb_eQnG, input.cjUyb_bGBk[type].cjUyb_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Course Name & Date*/
+    .enRcg_bGBk.enRcg_eQnG, input.enRcg_bGBk[type].enRcg_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Icon*/
+    .fOyUs_bGBk {
+        color: var(--text) !important;
     }
 }
 
 @-moz-document regexp(".*instructure\.com\/courses.*syllabus") { /*Course Syllabus*/
-    body {
-        background: #f1ff00 !important;
+    :root {
+        --dark-grey: #1d1e21 !important; /*Darker Background Color*/
+        --grey: #23272A !important; /*Normal Bakground Color*/
+        --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
+        --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
+        --text: #d7d7d7!important; /*Text Color & Highlights*/
+        --sub-text: #a7a7a7!important; /*Sub Text Color*/
+        
+        --fOyUs-focusColorInfo: #d7d7d7 !important; /*Green Highlight Color*/
+        --yyQPt-background: #2C2F33 !important; /*Discussion List View Check Box Background*/
+    }
+
+    /*NAV PANEL========================================================================================================*/
+    /*Remove Pasco County Logo (Top Left; Card and Recent Activity Only)*/
+    .ic-app-header__logomark {
+        height: 0px!important;
+    }
+    
+    /*Nav Panel | Background*/
+    .ic-app-header {
+        background-color: var(--dark-grey) !important;
+    }
+
+    /*Nav Panel | Selected Icon Background*/
+    .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link {
+        background: var(--light-grey) !important;
+    }
+
+    /*Nav Panel | Account Panel | Background*/
+    [dir="ltr"] .fLzZc_bxia {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Background*/
+    .MYpOQ_bGBk {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Course Nick Name*/
+    a.fbyHH_bGBk, button.fbyHH_bGBk {
+        color: var(--text) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Full Course Name*/
+    .cjUyb_bGBk.cjUyb_eQnG, input.cjUyb_bGBk[type].cjUyb_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Course Name & Date*/
+    .enRcg_bGBk.enRcg_eQnG, input.enRcg_bGBk[type].enRcg_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Icon*/
+    .fOyUs_bGBk {
+        color: var(--text) !important;
     }
 }
 
 @-moz-document regexp(".*instructure\.com.*announcements") { /*Course Announcements*/
-    body {
-        background: #1aff00 !important;
+    :root {
+        --dark-grey: #1d1e21 !important; /*Darker Background Color*/
+        --grey: #23272A !important; /*Normal Bakground Color*/
+        --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
+        --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
+        --text: #d7d7d7!important; /*Text Color & Highlights*/
+        --sub-text: #a7a7a7!important; /*Sub Text Color*/
+        
+        --fOyUs-focusColorInfo: #d7d7d7 !important; /*Green Highlight Color*/
+        --yyQPt-background: #2C2F33 !important; /*Discussion List View Check Box Background*/
+    }
+
+    /*NAV PANEL========================================================================================================*/
+    /*Remove Pasco County Logo (Top Left; Card and Recent Activity Only)*/
+    .ic-app-header__logomark {
+        height: 0px!important;
+    }
+    
+    /*Nav Panel | Background*/
+    .ic-app-header {
+        background-color: var(--dark-grey) !important;
+    }
+
+    /*Nav Panel | Selected Icon Background*/
+    .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link {
+        background: var(--light-grey) !important;
+    }
+
+    /*Nav Panel | Account Panel | Background*/
+    [dir="ltr"] .fLzZc_bxia {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Background*/
+    .MYpOQ_bGBk {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Course Nick Name*/
+    a.fbyHH_bGBk, button.fbyHH_bGBk {
+        color: var(--text) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Full Course Name*/
+    .cjUyb_bGBk.cjUyb_eQnG, input.cjUyb_bGBk[type].cjUyb_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Course Name & Date*/
+    .enRcg_bGBk.enRcg_eQnG, input.enRcg_bGBk[type].enRcg_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Icon*/
+    .fOyUs_bGBk {
+        color: var(--text) !important;
     }
 }
 
 @-moz-document regexp(".*instructure\.com.*modules") { /*Course Modules*/
-    body {
-        background: #00ffa6 !important;
+    :root {
+        --dark-grey: #1d1e21 !important; /*Darker Background Color*/
+        --grey: #23272A !important; /*Normal Bakground Color*/
+        --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
+        --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
+        --text: #d7d7d7!important; /*Text Color & Highlights*/
+        --sub-text: #a7a7a7!important; /*Sub Text Color*/
+        
+        --fOyUs-focusColorInfo: #d7d7d7 !important; /*Green Highlight Color*/
+        --yyQPt-background: #2C2F33 !important; /*Discussion List View Check Box Background*/
+    }
+
+    /*NAV PANEL========================================================================================================*/
+    /*Remove Pasco County Logo (Top Left; Card and Recent Activity Only)*/
+    .ic-app-header__logomark {
+        height: 0px!important;
+    }
+    
+    /*Nav Panel | Background*/
+    .ic-app-header {
+        background-color: var(--dark-grey) !important;
+    }
+
+    /*Nav Panel | Selected Icon Background*/
+    .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link {
+        background: var(--light-grey) !important;
+    }
+
+    /*Nav Panel | Account Panel | Background*/
+    [dir="ltr"] .fLzZc_bxia {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Background*/
+    .MYpOQ_bGBk {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Course Nick Name*/
+    a.fbyHH_bGBk, button.fbyHH_bGBk {
+        color: var(--text) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Full Course Name*/
+    .cjUyb_bGBk.cjUyb_eQnG, input.cjUyb_bGBk[type].cjUyb_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Course Name & Date*/
+    .enRcg_bGBk.enRcg_eQnG, input.enRcg_bGBk[type].enRcg_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Icon*/
+    .fOyUs_bGBk {
+        color: var(--text) !important;
     }
 }
 
 @-moz-document regexp(".*instructure\.com.*discussion_topics") { /*Course Discussions*/
-    body {
-        background: #00ffe7 !important;
+    :root {
+        --dark-grey: #1d1e21 !important; /*Darker Background Color*/
+        --grey: #23272A !important; /*Normal Bakground Color*/
+        --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
+        --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
+        --text: #d7d7d7!important; /*Text Color & Highlights*/
+        --sub-text: #a7a7a7!important; /*Sub Text Color*/
+        
+        --yyQPt-background: #2C2F33 !important; /*Discussion List View Check Box Background*/
+    }
+
+    /*NAV PANEL========================================================================================================*/
+    /*Remove Pasco County Logo (Top Left; Card and Recent Activity Only)*/
+    .ic-app-header__logomark {
+        height: 0px!important;
+    }
+    
+    /*Nav Panel | Background*/
+    .ic-app-header {
+        background-color: var(--dark-grey) !important;
+    }
+
+    /*Nav Panel | Selected Icon Background*/
+    .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link {
+        background: var(--light-grey) !important;
+    }
+
+    /*Nav Panel | Account Panel | Background*/
+    [dir="ltr"] .fLzZc_bxia {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Background*/
+    .MYpOQ_bGBk {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Course Nick Name*/
+    a.fbyHH_bGBk, button.fbyHH_bGBk {
+        color: var(--text) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Full Course Name*/
+    .cjUyb_bGBk.cjUyb_eQnG, input.cjUyb_bGBk[type].cjUyb_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Course Name & Date*/
+    .enRcg_bGBk.enRcg_eQnG, input.enRcg_bGBk[type].enRcg_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Icon*/
+    .fOyUs_bGBk {
+        color: var(--text) !important;
     }
 }
 
 @-moz-document regexp(".*instructure\.com.*grades") { /*Course Grades*/
-    body {
-        background: #09f !important;
+    :root {
+        --dark-grey: #1d1e21 !important; /*Darker Background Color*/
+        --grey: #23272A !important; /*Normal Bakground Color*/
+        --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
+        --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
+        --text: #d7d7d7!important; /*Text Color & Highlights*/
+        --sub-text: #a7a7a7!important; /*Sub Text Color*/
+        
+        --yyQPt-background: #2C2F33 !important; /*Discussion List View Check Box Background*/
+    }
+
+    /*NAV PANEL========================================================================================================*/
+    /*Remove Pasco County Logo (Top Left; Card and Recent Activity Only)*/
+    .ic-app-header__logomark {
+        height: 0px!important;
+    }
+    
+    /*Nav Panel | Background*/
+    .ic-app-header {
+        background-color: var(--dark-grey) !important;
+    }
+
+    /*Nav Panel | Selected Icon Background*/
+    .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link {
+        background: var(--light-grey) !important;
+    }
+
+    /*Nav Panel | Account Panel | Background*/
+    [dir="ltr"] .fLzZc_bxia {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Background*/
+    .MYpOQ_bGBk {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Course Nick Name*/
+    a.fbyHH_bGBk, button.fbyHH_bGBk {
+        color: var(--text) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Full Course Name*/
+    .cjUyb_bGBk.cjUyb_eQnG, input.cjUyb_bGBk[type].cjUyb_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Course Name & Date*/
+    .enRcg_bGBk.enRcg_eQnG, input.enRcg_bGBk[type].enRcg_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Icon*/
+    .fOyUs_bGBk {
+        color: var(--text) !important;
     }
 }
 
 @-moz-document regexp(".*instructure\.com.*users") { /*Course People*/
-    body {
-        background: #0040ff !important;
+    :root {
+        --dark-grey: #1d1e21 !important; /*Darker Background Color*/
+        --grey: #23272A !important; /*Normal Bakground Color*/
+        --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
+        --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
+        --text: #d7d7d7!important; /*Text Color & Highlights*/
+        --sub-text: #a7a7a7!important; /*Sub Text Color*/
+        
+        --yyQPt-background: #2C2F33 !important; /*Discussion List View Check Box Background*/
+    }
+
+    /*NAV PANEL========================================================================================================*/
+    /*Remove Pasco County Logo (Top Left; Card and Recent Activity Only)*/
+    .ic-app-header__logomark {
+        height: 0px!important;
+    }
+    
+    /*Nav Panel | Background*/
+    .ic-app-header {
+        background-color: var(--dark-grey) !important;
+    }
+
+    /*Nav Panel | Selected Icon Background*/
+    .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link {
+        background: var(--light-grey) !important;
+    }
+
+    /*Nav Panel | Account Panel | Background*/
+    [dir="ltr"] .fLzZc_bxia {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Background*/
+    .MYpOQ_bGBk {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Course Nick Name*/
+    a.fbyHH_bGBk, button.fbyHH_bGBk {
+        color: var(--text) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Full Course Name*/
+    .cjUyb_bGBk.cjUyb_eQnG, input.cjUyb_bGBk[type].cjUyb_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Course Name & Date*/
+    .enRcg_bGBk.enRcg_eQnG, input.enRcg_bGBk[type].enRcg_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Icon*/
+    .fOyUs_bGBk {
+        color: var(--text) !important;
     }
 }
 
 @-moz-document regexp(".*instructure\.com.*assignments") { /*Course Assignments*/
-    body {
-        background: #ff00fb !important;
+    :root {
+        --dark-grey: #1d1e21 !important; /*Darker Background Color*/
+        --grey: #23272A !important; /*Normal Bakground Color*/
+        --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
+        --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
+        --text: #d7d7d7!important; /*Text Color & Highlights*/
+        --sub-text: #a7a7a7!important; /*Sub Text Color*/
+        
+        --yyQPt-background: #2C2F33 !important; /*Discussion List View Check Box Background*/
+    }
+
+    /*NAV PANEL========================================================================================================*/
+    /*Remove Pasco County Logo (Top Left; Card and Recent Activity Only)*/
+    .ic-app-header__logomark {
+        height: 0px!important;
+    }
+    
+    /*Remove Pasco County Logo (Top Left; Card and Recent Activity Only)*/
+    .ic-app-header__logomark {
+        height: 0px!important;
+    }
+    
+    /*Nav Panel | Background*/
+    .ic-app-header {
+        background-color: var(--dark-grey) !important;
+    }
+
+    /*Nav Panel | Selected Icon Background*/
+    .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link {
+        background: var(--light-grey) !important;
+    }
+
+    /*Nav Panel | Account Panel | Background*/
+    [dir="ltr"] .fLzZc_bxia {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Background*/
+    .MYpOQ_bGBk {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Course Nick Name*/
+    a.fbyHH_bGBk, button.fbyHH_bGBk {
+        color: var(--text) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Full Course Name*/
+    .cjUyb_bGBk.cjUyb_eQnG, input.cjUyb_bGBk[type].cjUyb_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Course Name & Date*/
+    .enRcg_bGBk.enRcg_eQnG, input.enRcg_bGBk[type].enRcg_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Icon*/
+    .fOyUs_bGBk {
+        color: var(--text) !important;
     }
 }
 
 @-moz-document regexp(".*instructure\.com.*files") { /*Course Files*/
-    body {
-        background: #ff007b !important;
+    :root {
+        --dark-grey: #1d1e21 !important; /*Darker Background Color*/
+        --grey: #23272A !important; /*Normal Bakground Color*/
+        --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
+        --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
+        --text: #d7d7d7!important; /*Text Color & Highlights*/
+        --sub-text: #a7a7a7!important; /*Sub Text Color*/
+        
+        --yyQPt-background: #2C2F33 !important; /*Discussion List View Check Box Background*/
+    }
+
+    /*NAV PANEL========================================================================================================*/
+    /*Remove Pasco County Logo (Top Left; Card and Recent Activity Only)*/
+    .ic-app-header__logomark {
+        height: 0px!important;
+    }
+    
+    /*Nav Panel | Background*/
+    .ic-app-header {
+        background-color: var(--dark-grey) !important;
+    }
+
+    /*Nav Panel | Selected Icon Background*/
+    .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link {
+        background: var(--light-grey) !important;
+    }
+
+    /*Nav Panel | Account Panel | Background*/
+    [dir="ltr"] .fLzZc_bxia {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Background*/
+    .MYpOQ_bGBk {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Course Nick Name*/
+    a.fbyHH_bGBk, button.fbyHH_bGBk {
+        color: var(--text) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Full Course Name*/
+    .cjUyb_bGBk.cjUyb_eQnG, input.cjUyb_bGBk[type].cjUyb_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Course Name & Date*/
+    .enRcg_bGBk.enRcg_eQnG, input.enRcg_bGBk[type].enRcg_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Icon*/
+    .fOyUs_bGBk {
+        color: var(--text) !important;
     }
 }
 
 @-moz-document regexp(".*instructure\.com.*quizzes") { /*Course Quizzes*/
-    body {
-        background: #f00 !important;
+    :root {
+        --dark-grey: #1d1e21 !important; /*Darker Background Color*/
+        --grey: #23272A !important; /*Normal Bakground Color*/
+        --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
+        --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
+        --text: #d7d7d7!important; /*Text Color & Highlights*/
+        --sub-text: #a7a7a7!important; /*Sub Text Color*/
+        
+        --yyQPt-background: #2C2F33 !important; /*Discussion List View Check Box Background*/
+    }
+
+    /*NAV PANEL========================================================================================================*/
+    /*Remove Pasco County Logo (Top Left; Card and Recent Activity Only)*/
+    .ic-app-header__logomark {
+        height: 0px!important;
+    }
+    
+    /*Nav Panel | Background*/
+    .ic-app-header {
+        background-color: var(--dark-grey) !important;
+    }
+
+    /*Nav Panel | Selected Icon Background*/
+    .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link {
+        background: var(--light-grey) !important;
+    }
+
+    /*Nav Panel | Account Panel | Background*/
+    [dir="ltr"] .fLzZc_bxia {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Background*/
+    .MYpOQ_bGBk {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Course Nick Name*/
+    a.fbyHH_bGBk, button.fbyHH_bGBk {
+        color: var(--text) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Full Course Name*/
+    .cjUyb_bGBk.cjUyb_eQnG, input.cjUyb_bGBk[type].cjUyb_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Course Name & Date*/
+    .enRcg_bGBk.enRcg_eQnG, input.enRcg_bGBk[type].enRcg_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Icon*/
+    .fOyUs_bGBk {
+        color: var(--text) !important;
     }
 }
 
 @-moz-document regexp(".*instructure\.com\/calendar.*") { /*Calendar*/
-    body {
-        background: #f00 !important;
+    :root {
+        --dark-grey: #1d1e21 !important; /*Darker Background Color*/
+        --grey: #23272A !important; /*Normal Bakground Color*/
+        --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
+        --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
+        --text: #d7d7d7!important; /*Text Color & Highlights*/
+        --sub-text: #a7a7a7!important; /*Sub Text Color*/
+        
+        --yyQPt-background: #2C2F33 !important; /*Discussion List View Check Box Background*/
+    }
+
+    /*NAV PANEL========================================================================================================*/
+    /*Remove Pasco County Logo (Top Left; Card and Recent Activity Only)*/
+    .ic-app-header__logomark {
+        height: 0px!important;
+    }
+    
+    /*Nav Panel | Background*/
+    .ic-app-header {
+        background-color: var(--dark-grey) !important;
+    }
+
+    /*Nav Panel | Selected Icon Background*/
+    .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link {
+        background: var(--light-grey) !important;
+    }
+
+    /*Nav Panel | Account Panel | Background*/
+    [dir="ltr"] .fLzZc_bxia {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Background*/
+    .MYpOQ_bGBk {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Course Nick Name*/
+    a.fbyHH_bGBk, button.fbyHH_bGBk {
+        color: var(--text) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Full Course Name*/
+    .cjUyb_bGBk.cjUyb_eQnG, input.cjUyb_bGBk[type].cjUyb_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Course Name & Date*/
+    .enRcg_bGBk.enRcg_eQnG, input.enRcg_bGBk[type].enRcg_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Icon*/
+    .fOyUs_bGBk {
+        color: var(--text) !important;
     }
 }
 
 @-moz-document regexp(".*instructure\.com\/conversations.*") { /*Inbox*/
-    body {
-        background: #f00 !important;
+    :root {
+        --dark-grey: #1d1e21 !important; /*Darker Background Color*/
+        --grey: #23272A !important; /*Normal Bakground Color*/
+        --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
+        --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
+        --text: #d7d7d7!important; /*Text Color & Highlights*/
+        --sub-text: #a7a7a7!important; /*Sub Text Color*/
+        
+        --yyQPt-background: #2C2F33 !important; /*Discussion List View Check Box Background*/
+    }
+
+    /*NAV PANEL========================================================================================================*/
+    /*Remove Pasco County Logo (Top Left; Card and Recent Activity Only)*/
+    .ic-app-header__logomark {
+        height: 0px!important;
+    }
+    
+    /*Nav Panel | Background*/
+    .ic-app-header {
+        background-color: var(--dark-grey) !important;
+    }
+
+    /*Nav Panel | Selected Icon Background*/
+    .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link {
+        background: var(--light-grey) !important;
+    }
+
+    /*Nav Panel | Account Panel | Background*/
+    [dir="ltr"] .fLzZc_bxia {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Background*/
+    .MYpOQ_bGBk {
+        background: var(--grey) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Course Nick Name*/
+    a.fbyHH_bGBk, button.fbyHH_bGBk {
+        color: var(--text) !important;
+    }
+    
+    /*Nav Panel | Courses Panel | Full Course Name*/
+    .cjUyb_bGBk.cjUyb_eQnG, input.cjUyb_bGBk[type].cjUyb_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Course Name & Date*/
+    .enRcg_bGBk.enRcg_eQnG, input.enRcg_bGBk[type].enRcg_eQnG {
+        color: var(--sub-text) !important;
+    }
+    
+    /*Nav Panel | Recent History Panel | Icon*/
+    .fOyUs_bGBk {
+        color: var(--text) !important;
     }
 }

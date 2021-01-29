@@ -1,17 +1,68 @@
 /* ==UserStyle==
 @name        myLearning Dark Mode
 @namespace   soupyzinc
-@version     1.2.4
+@version     1.3.4
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita & Ryan Trinh
 ==/UserStyle== */
-/**v1.2.4 | Last Updated: 11 November 2020 | 9:54 PM EST
- * -Fixed discussion reply file attatchment.
- * -Fixed issue: https://github.com/SoupyzInc/CanvasDarkMode/issues/14
+/**v1.3.4 | Last Updated: 29 January 2021 | 10:05 AM EST
+ * -Added dark mode to the login screen for myPasco classlink (Pasco County Exclusive).
  */
+
+@-moz-document regexp(".*pascosso.pasco.k12.fl.us/adfs/ls/.*") {
+    :root {
+        --dark-grey: #1d1e21 !important; /*Darker Background Color*/
+        --grey: #23272A !important; /*Normal Bakground Color*/
+        --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
+        --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
+        --text: #d7d7d7 !important; /*Text Color & Highlights*/
+        --sub-text: #a7a7a7 !important; /*Sub Text Color*/
+        
+        --fOyUs-focusColorInfo: #d7d7d7 !important; /*Green Highlight Color*/
+        --yyQPt-background: #2C2F33 !important; /*Discussion List View Check Box Background*/
+    }
+
+    /*Background*/
+    #contentWrapper {
+        background-color: var(--grey) !important;
+    }
+    
+    /*MyPasco Logo*/
+    #header img {
+        width: 0 !important;
+    }
+    
+    /*Text*/
+    body {
+        color: var(--text) !important;
+    }
+    
+    /*Sign In Button*/
+    span.submit, input[type="submit"] {
+        background-color: var(--light-grey) !important;
+        color: var(--text) !important;
+    }
+    
+    /*Left Picture*/
+    .illustrationClass {
+        background-image: url() !important;
+        background: var(--dark-grey) !important;
+    }
+    
+    /*Text Boxes*/
+    input.text {
+        height: 28px;
+        padding: 0px 3px 0px 3px;
+        border: solid 1px var(--text) !important;
+        background: var(--light-grey) !important;
+        color: var(--text) !important;
+    }
+    
+}
+
 @-moz-document domain("instructure.com") {
     :root {
         --dark-grey: #1d1e21 !important; /*Darker Background Color*/

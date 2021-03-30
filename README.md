@@ -30,6 +30,7 @@ thing-you-are-changing {
   /*Otherwise nothing will happen*/
  }
 ```
+Ex:
 ```css
 /*General Text*/
 body {

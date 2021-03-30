@@ -17,6 +17,38 @@ A Stylus extension to give Canvas/myLearning a dark mode so your retinas don't h
 ## Bugs/Suggestions
 - If you find a bug that isn't already known, please submit it to the [issue tab](https://github.com/SoupyzInc/CanvasDarkMode/issues) and flag it with the bug tag. Please provide a photo and description clearly showing the bug. *Be careful not to leak any of your or others personal information: such as grades, names, private messages, etc.*
 - If you would like to suggest a feature that isn't already suggested, please submit it to the [issue tab](https://github.com/SoupyzInc/CanvasDarkMode/issues) and flag it with the enhancement tag.
+- Canvas is used by a lot of schools around the country, some outside the US; and because of that, each school will probably need its own tweaks to function well. Unfortunately, changes made to one school's Canvas may affect another school's Canvas. So feel free to fork this repo and work off of it as a template, I try to put good comments on everything we touch to make it easy to know what's happening.
+
+## Contribution
+If you would like to contribute to this repository directly, feel free to open a pull request! Try to generally follow the formatting that is currently being used for the colors and actual code itself.
+Code is formatted as so:
+```css
+/*Description of what is being changed*/
+thing-you-are-changing {
+  color: var(--text) !important; 
+  /*Make sure to flag the element you're changing as important!*/
+  /*Otherwise nothing will happen*/
+ }
+```
+```css
+/*General Text*/
+body {
+  color: var(--text) !important;
+ }
+```
+
+and these are the colors we are using (please use the variables):
+```css
+:root {
+    --dark-grey: #1d1e21 !important; /*Darker Background Color*/
+    --grey: #23272A !important; /*Normal Bakground Color*/
+    --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
+    --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
+    --text: #d7d7d7 !important; /*Text Color & Highlights*/
+    --sub-text: #a7a7a7 !important; /*Sub Text Color*/
+}
+```
+You can get a feel for what things are colored what colors by looking around the code and Canvas it self.
 
 ## Fix List
 Stuff I plan to fix next in order of priority (not absolute).

@@ -1,16 +1,44 @@
 /* ==UserStyle==
 @name        myLearning Dark Mode
 @namespace   soupyzinc
-@version     1.3.4
+@version     1.3.5
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/main/CanvasDarkMode.user.css
 @license     MIT
 @author      Matthew Okashita & Ryan Trinh
 ==/UserStyle== */
-/**v1.3.4 | Last Updated: 29 January 2021 | 10:05 AM EST
- * -Added dark mode to the login screen for myPasco classlink (Pasco County Exclusive).
+/**v1.3.5 | Last Updated: 1 April 2021 | 11:29 AM EST
+ * -Fixed external link icon being too dark (https://github.com/SoupyzInc/CanvasDarkMode/issues/19)
  */
+
+@-moz-document regexp(".*launchpad.classlink.com.*") {
+    :root {
+        --dark-grey: #1d1e21 !important; /*Darker Background Color*/
+        --grey: #23272A !important; /*Normal Bakground Color*/
+        --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
+        --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
+        --text: #d7d7d7 !important; /*Text Color & Highlights*/
+        --sub-text: #a7a7a7 !important; /*Sub Text Color*/
+        
+        --fOyUs-focusColorInfo: #d7d7d7 !important; /*Green Highlight Color*/
+        --yyQPt-background: #2C2F33 !important; /*Discussion List View Check Box Background*/
+    }
+    
+    /*Background*/
+    body {
+        background: url() no-repeat center center fixed !important;
+        background: var(--dark-grey) !important;
+    }
+    
+    .btn-primary.saml {
+        background: var(--grey) !important;
+        border: solid 1px var(--text) !important;
+        box-shadow: 0px 4px 0px 0px var(--grey) !important;
+        -webkit-box-shadow: 0px 4px 0px 0px var(--grey) !important;
+        color: var(--text) !important;
+    }
+}
 
 @-moz-document regexp(".*pascosso.pasco.k12.fl.us/adfs/ls/.*") {
     :root {
@@ -73,6 +101,11 @@
         --sub-text: #a7a7a7!important; /*Sub Text Color*/
     
         --yyQPt-background: #2C2F33 !important; /*Discussion List View Check Box Background*/
+    }
+    
+    /*Make external link icon white (Issue 19)*/
+    .ui-icon {
+        filter: invert(100%) !important;
     }
 
     /*DASHBOARD=====================================================*/
@@ -150,7 +183,6 @@
         color: var(--text) !important;
         background: var(--grey);
     }
-    
     
     
     /*Card 3 Dots Menu | Footer*/

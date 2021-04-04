@@ -47,7 +47,7 @@ body {
  }
 ```
 
-and these are the colors we are using (please use the variables):
+and these are the colors we are using (please use these variables):
 ```css
 :root {
     --dark-grey: #1d1e21 !important; /*Darker Background Color*/

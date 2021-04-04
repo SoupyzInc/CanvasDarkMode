@@ -1,4 +1,10 @@
 # Canvas/myLearning Dark Mode
+![Version | 1.3.6](https://img.shields.io/badge/version-1.3.6-green)
+![License | MIT](https://img.shields.io/github/license/soupyzinc/CanvasDarkMode)
+![](https://img.shields.io/github/issues-raw/soupyzinc/canvasdarkmode)
+![](https://img.shields.io/github/issues-closed-raw/soupyzinc/canvasdarkmode)
+
+
 A Stylus extension to give Canvas/myLearning a dark mode so your retinas don't have to burn out. 
 
 ### **Scroll down to see install instructions.**

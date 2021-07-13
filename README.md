@@ -37,25 +37,25 @@ thing-you-are-changing {
   color: var(--text) !important; 
   /*Make sure to flag the element you're changing as important!*/
   /*Otherwise nothing will happen*/
- }
+}
 ```
 Ex:
 ```css
 /*General Text*/
 body {
   color: var(--text) !important;
- }
+}
 ```
 
 and these are the colors we are using (please use these variables):
 ```css
 :root {
-    --dark-grey: #1d1e21 !important; /*Darker Background Color*/
-    --grey: #23272A !important; /*Normal Bakground Color*/
-    --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
-    --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
-    --text: #d7d7d7 !important; /*Text Color & Highlights*/
-    --sub-text: #a7a7a7 !important; /*Sub Text Color*/
+  --dark-grey: #1d1e21 !important; /*Darker Background Color*/
+  --grey: #23272A !important; /*Normal Bakground Color*/
+  --light-grey: #2C2F33 !important; /*Light Color to show that you can interact*/
+  --white-grey: #99AAB5 !important; /*Lighter Color to show even more interactivity*/
+  --text: #d7d7d7 !important; /*Text Color & Highlights*/
+  --sub-text: #a7a7a7 !important; /*Sub Text Color*/
 }
 ```
 You can get a feel for what things are colored what colors by looking around the code and Canvas it self.
@@ -66,9 +66,6 @@ Stuff I plan to fix next in order of priority (not absolute).
 - [Reogranizing the code so that each section of Canvas has its own style sheet.](https://github.com/SoupyzInc/CanvasDarkMode/issues/12)
 - [All other known issues.](https://github.com/SoupyzInc/CanvasDarkMode/issues)
 
-
 <p align="right">
 <img src="https://github.com/SoupyzInc/CanvasDarkMode/blob/main/images/CanvasDarkModeQRCode.png" alt="alt text" height="200">
 </p>
-
-<!-- -->

@@ -60,12 +60,6 @@ and these are the colors we are using (please use these variables):
 ```
 You can get a feel for what things are colored what colors by looking around the code and Canvas it self.
 
-## Fix List
-Stuff I plan to fix next in order of priority (not absolute).
-
-- [Reogranizing the code so that each section of Canvas has its own style sheet.](https://github.com/SoupyzInc/CanvasDarkMode/issues/12)
-- [All other known issues.](https://github.com/SoupyzInc/CanvasDarkMode/issues)
-
 <p align="right">
 <img src="https://github.com/SoupyzInc/CanvasDarkMode/blob/main/images/CanvasDarkModeQRCode.png" alt="alt text" height="200">
 </p>

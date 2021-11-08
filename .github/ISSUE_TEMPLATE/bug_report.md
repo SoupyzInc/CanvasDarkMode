@@ -20,4 +20,4 @@ What version of CanvasDarkMode are you using?
 Which web browser are you using?
 
 **Machine OS**
-What kind of OS are you running? Windows? MacOS? Linux? A Raspberry Pi????
+What kind of OS are you running? Windows? MacOS? Linux?

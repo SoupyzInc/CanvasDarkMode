@@ -1,7 +1,8 @@
 /* ==UserStyle==
 @name        Regex Patch
 @namespace   soupyzinc
-@version     1.0.4
+@version     2.0.5
+@description A Stylus extension to give Canvas/myLearning a dark mode so your retinas don't have to burn out.
 @homepageURL https://github.com/SoupyzInc/CanvasDarkMode
 @supportURL  https://github.com/SoupyzInc/CanvasDarkMode/issues
 @updateURL   https://raw.githubusercontent.com/SoupyzInc/CanvasDarkMode/Regex-Patch/CanvasDarkMode.user.css
@@ -269,7 +270,7 @@
     } 
 }
 
-@-moz-document regexp(".*instructure\.com\/courses.*") { /*Course Home*/
+@-moz-document regexp(".*instructure\.com\/courses\/.*") { /*Course Home*/
     :root {
         --dark-grey: #1d1e21 !important; /*Darker Background Color*/
         --grey: #23272A !important; /*Normal Bakground Color*/
@@ -326,6 +327,98 @@
     /*Nav Panel | Recent History Panel | Icon*/
     .fOyUs_bGBk {
         color: var(--text) !important;
+    }
+    
+    /*ALL VIEWS========================================================================================================*/
+    /*Most Backgrounds and Text*/
+    body {
+        background: var(--grey) !important;
+        color: var(--text) !important;
+    }
+    
+    /*Dashboard Header*/
+    .ic-Dashboard-header__layout {
+        border-bottom: 1px solid var(--text) !important;
+        background: var(--grey) !important;
+    }
+
+    /*Remove myLearning Logo (Top Right)*/
+    .ic-sidebar-logo__image {
+        height: 0px !important;
+    }
+    
+    /*Remove myLearning Water Mark (Bottom Left)*/
+    .ic-Layout-watermark {
+        height: 0 !important;
+    }
+    
+    /*Three Dots Context Menu (Top Right)*/
+    .sJGfW_blJt {
+        background: var(--light-grey) !important;
+        color: var(--text) !important;
+    }
+    
+    /*Pop-Up Error Message*/
+    .cvphu_bgqc {
+        background: var(--dark-grey) !important;
+        color: var(--text) !important;
+    }
+    
+    /*Pop-Up Announcement*/
+    .ic-notification__content {
+        background: var(--grey) !important;
+    }
+    
+    /*Side Nav Panel Selected Item Color*/
+    .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-icon-svg {
+        fill: var(--dark-grey) !important;
+    }
+    
+    /*TTS Button (Bottom Left)*/
+    .rspopup {
+        background: var(--light-grey) !important;
+        box-shadow: 0 0 5px #000 !important;
+        color: var(--text) !important;
+    }
+    
+    /*HOME PAGE========================================================================================================*/
+    a, p {
+        color: var(--text) !important;
+    }
+    
+    /*Class Name Directory (top left)*/
+    #breadcrumbs>ul>li {
+        background-color: var(--grey) !important;
+    }
+    
+    /*View buttons (top right)*/
+    .btn, .Button, .ui-button {
+        background-color: var(--grey) !important;
+    }
+    
+    /*Remove shadow on recent grades box*/
+    #right-side .events_list .event-details:after {
+        background: none !important;
+    }
+    
+    /*Waffle Icon*/
+    .ic-app-course-nav-toggle i[class*=icon-]:before, .ic-app-course-nav-toggle i[class^=icon-]:before {
+        color: var(--text) !important;
+    }
+
+    /*Announcement and Assignment Notif Hover*/
+    div.stream_header:hover {
+        background-color: var(--light-grey) !important;
+    }
+    
+    /*Sub item hover for above*/
+    tr:hover {
+        background-color: var(--light-grey) !important;
+    }
+    
+    /*Sub item border*/
+    .stream-details tr {
+        border-top: 1px solid var(--text);
     }
 }
 
